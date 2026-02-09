@@ -38,7 +38,7 @@ export const Careers: React.FC<CareersProps> = ({ onNavigate }) => {
     <section 
       id="careers" 
       ref={sectionRef}
-      className={`py-40 bg-luxury-black relative overflow-hidden border-t border-white/5 transition-all duration-1000 cubic-bezier(0.22, 1, 0.36, 1) ${
+      className={`py-40 bg-luxury-black relative overflow-hidden border-t border-white/5 transition-all duration-500 cubic-bezier(0.22, 1, 0.36, 1) ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
       }`}
     >

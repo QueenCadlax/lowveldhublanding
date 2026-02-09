@@ -15,10 +15,22 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      if (mobileMenuOpen) setMobileMenuOpen(false);
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [mobileMenuOpen]);
+
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [mobileMenuOpen]);
 
   return (
     <nav className={`${isScrolled ? 'scrolled' : ''}`}>
@@ -61,14 +73,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
 
       {/* Mobile Navigation Menu */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 top-[72px] z-50 bg-luxury-black/98 backdrop-blur-lg md:hidden">
-          <div className="flex flex-col items-center space-y-8 px-6 py-12">
+        <div className="fixed inset-0 top-[72px] z-50 bg-gradient-to-b from-luxury-black/99 via-luxury-black/95 to-black/90 backdrop-blur-xl md:hidden">
+          <div className="flex flex-col items-center justify-center space-y-12 px-6 py-24 min-h-screen">
             <button 
               onClick={() => {
                 onNavigate('careers');
                 setMobileMenuOpen(false);
               }}
-              className="text-base uppercase tracking-[0.1em] font-sans text-white hover:text-luxury-gold transition-colors"
+              className="text-sm uppercase tracking-[0.12em] font-sans font-light text-white/80 hover:text-luxury-gold transition-colors duration-300"
             >
               Careers
             </button>
@@ -77,7 +89,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
                 onNavigate('partners');
                 setMobileMenuOpen(false);
               }}
-              className="px-8 py-3 border-2 border-luxury-gold/50 hover:border-luxury-gold text-white hover:text-luxury-gold text-base uppercase tracking-[0.1em] font-sans transition-all duration-500 hover:bg-luxury-gold/5"
+              className="px-10 py-3 border border-luxury-gold/40 hover:border-luxury-gold text-white/80 hover:text-luxury-gold text-sm uppercase tracking-[0.12em] font-sans font-light transition-all duration-500 hover:bg-luxury-gold/5"
             >
               Partner With Us
             </button>

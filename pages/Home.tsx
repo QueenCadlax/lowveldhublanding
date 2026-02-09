@@ -66,6 +66,8 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             <img 
               src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=95&w=2400" 
               alt="Luxury Architecture" 
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover scale-[1.05] opacity-25 grayscale brightness-[0.8]"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-[#020203]/95 via-[#020203]/40 to-[#020203]"></div>

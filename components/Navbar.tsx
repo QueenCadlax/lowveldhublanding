@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Logo } from './Logo';
+import { Menu, X } from 'lucide-react';
 
 interface NavbarProps {
   onNavigate: (page: string) => void;
@@ -9,6 +10,7 @@ interface NavbarProps {
 
 export const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,6 +33,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
           <Logo variant="full" size="sm" />
         </button>
         
+        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8 text-[12px] uppercase tracking-[0.08em] font-sans font-medium">
           <button 
             onClick={() => onNavigate('careers')}
@@ -46,7 +49,41 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
             Partner With Us
           </button>
         </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="md:hidden text-white/60 hover:text-luxury-gold transition-colors outline-none"
+        >
+          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
       </div>
+
+      {/* Mobile Navigation Menu */}
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 top-[72px] z-50 bg-luxury-black/98 backdrop-blur-lg md:hidden">
+          <div className="flex flex-col items-center space-y-8 px-6 py-12">
+            <button 
+              onClick={() => {
+                onNavigate('careers');
+                setMobileMenuOpen(false);
+              }}
+              className="text-base uppercase tracking-[0.1em] font-sans text-white hover:text-luxury-gold transition-colors"
+            >
+              Careers
+            </button>
+            <button 
+              onClick={() => {
+                onNavigate('partners');
+                setMobileMenuOpen(false);
+              }}
+              className="px-8 py-3 border-2 border-luxury-gold/50 hover:border-luxury-gold text-white hover:text-luxury-gold text-base uppercase tracking-[0.1em] font-sans transition-all duration-500 hover:bg-luxury-gold/5"
+            >
+              Partner With Us
+            </button>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

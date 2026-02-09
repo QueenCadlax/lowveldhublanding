@@ -81,7 +81,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 
         <div className="relative z-50 text-center px-6 max-w-6xl py-12">
           {/* Brand Header Label */}
-          <div className="inline-block mb-8 md:mb-10 px-6 md:px-8 py-2 border border-luxury-gold/20 rounded-full bg-black/40 backdrop-blur-3xl animate-in fade-in zoom-in duration-1000">
+          <div className="inline-block mb-8 md:mb-10 px-6 md:px-8 py-2 border border-luxury-gold/20 rounded-full bg-black/40 backdrop-blur-3xl animate-in fade-in zoom-in duration-500">
             <span className="text-[9px] md:text-[11px] uppercase tracking-[0.4em] md:tracking-[0.5em] font-sans text-luxury-goldLight font-medium">
               Private Early Access - Now Open
             </span>

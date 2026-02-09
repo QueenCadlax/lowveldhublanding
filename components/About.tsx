@@ -38,7 +38,7 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => {
     <section 
       id="about" 
       ref={sectionRef}
-      className={`pt-20 pb-40 bg-luxury-black relative overflow-hidden transition-all duration-1000 cubic-bezier(0.22, 1, 0.36, 1) ${
+      className={`pt-20 pb-40 bg-luxury-black relative overflow-hidden transition-all duration-500 cubic-bezier(0.22, 1, 0.36, 1) ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
       }`}
     >

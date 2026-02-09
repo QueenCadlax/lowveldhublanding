@@ -59,7 +59,7 @@ export const Features: React.FC = () => {
     <section 
       id="ecosystem" 
       ref={sectionRef}
-      className={`py-32 bg-luxury-dark relative transition-all duration-1000 cubic-bezier(0.22, 1, 0.36, 1) ${
+      className={`py-32 bg-luxury-dark relative transition-all duration-500 cubic-bezier(0.22, 1, 0.36, 1) ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
       }`}
     >

@@ -73,14 +73,22 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
 
       {/* Mobile Navigation Menu */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-[9999] bg-luxury-black md:hidden">
-          <div className="flex flex-col items-center justify-center space-y-16 px-6 py-32 h-full">
+        <div className="fixed inset-0 z-[9999] bg-luxury-black md:hidden overflow-y-auto">
+          <div className="min-h-full flex flex-col items-center justify-center space-y-16 px-6 py-32 relative">
+            {/* Close Button */}
+            <button
+              onClick={() => setMobileMenuOpen(false)}
+              className="absolute top-6 right-6 text-white/60 hover:text-luxury-gold transition-colors outline-none"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
             <button 
               onClick={() => {
                 onNavigate('careers');
                 setMobileMenuOpen(false);
               }}
-              className="text-lg uppercase tracking-[0.15em] font-sans font-medium text-white hover:text-luxury-gold transition-colors duration-300"
+              className="text-base uppercase tracking-[0.15em] font-sans font-medium text-white hover:text-luxury-gold transition-colors duration-300"
             >
               Careers
             </button>
@@ -89,7 +97,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
                 onNavigate('partners');
                 setMobileMenuOpen(false);
               }}
-              className="px-12 py-4 border-2 border-luxury-gold text-white hover:text-luxury-gold text-lg uppercase tracking-[0.15em] font-sans font-medium transition-all duration-500 hover:bg-luxury-gold/10"
+              className="px-12 py-4 text-white hover:text-luxury-gold text-base uppercase tracking-[0.15em] font-sans font-medium transition-all duration-500 md:border-2 md:border-luxury-gold md:hover:bg-luxury-gold/10"
             >
               Partner With Us
             </button>

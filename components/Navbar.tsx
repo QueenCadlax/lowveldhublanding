@@ -88,7 +88,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
                 onNavigate('careers');
                 setMobileMenuOpen(false);
               }}
-              className="text-base uppercase tracking-[0.15em] font-sans font-medium text-white hover:text-luxury-gold transition-colors duration-300"
+              className="text-base uppercase tracking-[0.15em] font-sans font-medium text-white hover:text-luxury-gold transition-colors duration-300 outline-none"
             >
               Careers
             </button>
@@ -97,7 +97,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
                 onNavigate('partners');
                 setMobileMenuOpen(false);
               }}
-              className="px-12 py-4 text-white hover:text-luxury-gold text-base uppercase tracking-[0.15em] font-sans font-medium transition-all duration-500 md:border-2 md:border-luxury-gold md:hover:bg-luxury-gold/10"
+              className="px-12 py-4 text-base uppercase tracking-[0.15em] font-sans font-medium text-white hover:text-luxury-gold transition-all duration-500 outline-none hidden md:block md:border-2 md:border-luxury-gold md:hover:bg-luxury-gold/10"
+            >
+              Partner With Us
+            </button>
+            <button 
+              onClick={() => {
+                onNavigate('partners');
+                setMobileMenuOpen(false);
+              }}
+              className="md:hidden px-12 py-4 text-base uppercase tracking-[0.15em] font-sans font-medium text-white hover:text-luxury-gold transition-all duration-500 outline-none"
             >
               Partner With Us
             </button>

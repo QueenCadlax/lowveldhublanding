@@ -73,8 +73,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
 
       {/* Mobile Navigation Menu */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-[9999] bg-luxury-black md:hidden overflow-y-auto">
-          <div className="min-h-full flex flex-col items-center justify-center space-y-16 px-6 py-32 relative">
+        <div className="fixed inset-0 z-[9999] bg-luxury-black md:hidden">
+          <div className="flex flex-col items-center justify-center space-y-12 h-full relative">
             {/* Close Button */}
             <button
               onClick={() => setMobileMenuOpen(false)}
@@ -97,16 +97,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
                 onNavigate('partners');
                 setMobileMenuOpen(false);
               }}
-              className="px-12 py-4 text-base uppercase tracking-[0.15em] font-sans font-medium text-white hover:text-luxury-gold transition-all duration-500 outline-none hidden md:block md:border-2 md:border-luxury-gold md:hover:bg-luxury-gold/10"
-            >
-              Partner With Us
-            </button>
-            <button 
-              onClick={() => {
-                onNavigate('partners');
-                setMobileMenuOpen(false);
-              }}
-              className="md:hidden px-12 py-4 text-base uppercase tracking-[0.15em] font-sans font-medium text-white hover:text-luxury-gold transition-all duration-500 outline-none"
+              className="px-12 py-4 text-base uppercase tracking-[0.15em] font-sans font-medium text-white hover:text-luxury-gold transition-all duration-500 outline-none"
             >
               Partner With Us
             </button>

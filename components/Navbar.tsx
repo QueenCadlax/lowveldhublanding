@@ -74,7 +74,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
       {/* Mobile Navigation Menu */}
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-[9999] bg-luxury-black md:hidden">
-          <div className="flex flex-col items-center justify-start pt-32 space-y-12 h-full relative md:justify-center">
+          <div className="flex flex-col items-center justify-start pt-24 space-y-12 h-full relative md:justify-center">
             {/* Close Button */}
             <button
               onClick={() => setMobileMenuOpen(false)}

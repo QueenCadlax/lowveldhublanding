@@ -73,14 +73,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
 
       {/* Mobile Navigation Menu */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 top-[72px] z-50 bg-gradient-to-b from-luxury-black/99 via-luxury-black/95 to-black/90 backdrop-blur-xl md:hidden">
-          <div className="flex flex-col items-center justify-center space-y-12 px-6 py-24 min-h-screen">
+        <div className="fixed inset-0 z-[9999] bg-luxury-black md:hidden">
+          <div className="flex flex-col items-center justify-center space-y-16 px-6 py-32 h-full">
             <button 
               onClick={() => {
                 onNavigate('careers');
                 setMobileMenuOpen(false);
               }}
-              className="text-sm uppercase tracking-[0.12em] font-sans font-light text-white/80 hover:text-luxury-gold transition-colors duration-300"
+              className="text-lg uppercase tracking-[0.15em] font-sans font-medium text-white hover:text-luxury-gold transition-colors duration-300"
             >
               Careers
             </button>
@@ -89,7 +89,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
                 onNavigate('partners');
                 setMobileMenuOpen(false);
               }}
-              className="px-10 py-3 border border-luxury-gold/40 hover:border-luxury-gold text-white/80 hover:text-luxury-gold text-sm uppercase tracking-[0.12em] font-sans font-light transition-all duration-500 hover:bg-luxury-gold/5"
+              className="px-12 py-4 border-2 border-luxury-gold text-white hover:text-luxury-gold text-lg uppercase tracking-[0.15em] font-sans font-medium transition-all duration-500 hover:bg-luxury-gold/10"
             >
               Partner With Us
             </button>

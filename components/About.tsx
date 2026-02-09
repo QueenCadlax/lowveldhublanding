@@ -52,7 +52,7 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => {
         
         <div className="space-y-12">
           <h3 className="text-3xl md:text-5xl font-serif font-light leading-snug italic text-white/95">
-            "LowveldHub connects you to Mpumalanga’s most trusted businesses and premium experiences: creating opportunities, elevating lifestyles, and empowering our community."
+            LowveldHub connects you to Mpumalanga's most trusted businesses and premium experiences: creating opportunities, elevating lifestyles, and empowering our community.
           </h3>
           
           <div className="w-16 h-px bg-gradient-to-r from-transparent via-luxury-gold/40 to-transparent mx-auto"></div>

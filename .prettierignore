@@ -1,0 +1,16 @@
+# Dependencies
+node_modules
+
+# Build outputs
+dist
+build
+.next
+out
+
+# Tools
+.venv
+venv
+env
+
+# Files
+*.log

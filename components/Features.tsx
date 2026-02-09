@@ -6,29 +6,29 @@ const ecosystemGroups = [
   {
     category: "Premium Services",
     items: [
-      { title: "Verified Business Directory", icon: <ShieldCheck className="w-5 h-5" />, desc: "Connect with trusted local providers, all verified for excellence." },
-      { title: "Jobs & Opportunities", icon: <Briefcase className="w-5 h-5" />, desc: "Explore elite career paths for Mpumalanga’s top talent." },
+      { title: "Verified Business Directory", icon: <ShieldCheck className="w-5 h-5" />, desc: "Connect with trusted local businesses and service providers, all verified for excellence." },
+      { title: "Doctors, Lawyers & Trusted Experts", icon: <Briefcase className="w-5 h-5" />, desc: "Access verified medical professionals, legal experts, accountants, consultants, and essential service providers." },
     ]
   },
   {
     category: "Lifestyle & Stays",
     items: [
       { title: "Luxury Stays & Resorts", icon: <Home className="w-5 h-5" />, desc: "Experience the finest accommodations the region has to offer." },
-      { title: "Experiences & Tourism", icon: <Map className="w-5 h-5" />, desc: "Unlock Mpumalanga’s hidden gems and unforgettable adventures." },
+      { title: "Curated Adventures & Destinations", icon: <Map className="w-5 h-5" />, desc: "Unlock Mpumalanga's hidden gems, premium tours, and unforgettable experiences." },
     ]
   },
   {
     category: "Assets & Acquisitions",
     items: [
-      { title: "Premium Vehicles", icon: <Car className="w-5 h-5" />, desc: "Access an exclusive marketplace for luxury and supercars." },
-      { title: "Real Estate & Developments", icon: <Building className="w-5 h-5" />, desc: "Browse high-end residential and commercial properties." },
+      { title: "Premium Vehicles & Luxury Assets", icon: <Car className="w-5 h-5" />, desc: "Access an exclusive marketplace for luxury vehicles, supercars, and premium assets." },
+      { title: "High-End Property & Investments", icon: <Building className="w-5 h-5" />, desc: "Browse elite residential, commercial, and lifestyle developments." },
     ]
   },
   {
     category: "Curated Commerce",
     items: [
-      { title: "Events & Lifestyle", icon: <Calendar className="w-5 h-5" />, desc: "Attend the region’s most exclusive gatherings." },
-      { title: "Marketplace & Local Brands", icon: <ShoppingBag className="w-5 h-5" />, desc: "Shop premium local brands, curated for quality and distinction." },
+      { title: "Events & Lifestyle Experiences", icon: <Calendar className="w-5 h-5" />, desc: "Attend the region's most exclusive gatherings, launches, and premium events." },
+      { title: "Premium Products & Trusted Brands", icon: <ShoppingBag className="w-5 h-5" />, desc: "Shop verified local brands, curated for quality, design, and distinction." },
     ]
   }
 ];
@@ -67,7 +67,7 @@ export const Features: React.FC = () => {
         <div className="mb-24 text-center md:text-left md:flex md:items-end md:justify-between gap-10">
           <div className="max-w-3xl">
             <h2 className="text-[10px] uppercase tracking-[0.5em] text-luxury-gold mb-6 font-sans font-medium">The Ecosystem</h2>
-            <h3 className="text-4xl md:text-6xl font-serif font-light mb-4">Discover what LowveldHub offers</h3>
+            <h3 className="text-4xl md:text-6xl font-serif font-light mb-4">A Complete Premium Digital Ecosystem</h3>
           </div>
           <div className="hidden md:flex flex-col items-end max-w-xs text-right">
             <p className="text-white/60 text-sm font-sans font-light leading-relaxed mb-4 italic">
@@ -85,7 +85,7 @@ export const Features: React.FC = () => {
                 {group.items.map((item, iIdx) => (
                   <div 
                     key={iIdx} 
-                    className="group p-10 bg-luxury-black transition-all duration-700 hover:bg-luxury-gold/[0.03] cursor-default overflow-hidden relative"
+                    className="group p-10 bg-luxury-black transition-all duration-700 hover:bg-luxury-gold/[0.03] cursor-default overflow-hidden relative min-h-[280px]"
                   >
                     <div className="absolute top-0 right-0 p-8 text-white/5 group-hover:text-luxury-gold/10 transition-colors duration-700">
                       <div className="scale-[2] transform">{item.icon}</div>

@@ -22,12 +22,12 @@ export const Hero: React.FC = () => {
           <span className="text-[9px] md:text-[10px] uppercase tracking-[0.3em] md:tracking-[0.5em] font-sans text-luxury-goldLight font-medium">RESERVATIONS OPEN | 2026</span>
         </div>
         
-        <h1 className="text-4xl sm:text-6xl md:text-9xl font-serif font-light mb-6 md:mb-8 tracking-tight leading-tight text-white">
-          LOWVELD<span className="italic font-normal text-gold-gradient pr-4 md:pr-10">HUB</span>
+        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-light mb-6 md:mb-8 tracking-tight leading-tight text-white">
+          Mpumalanga's <span className="text-luxury-gold">Premium</span> Digital Ecosystem
         </h1>
         
-        <p className="text-base md:text-lg lg:text-xl font-sans font-extralight text-white/80 max-w-2xl mx-auto mb-10 md:mb-12 leading-relaxed tracking-wide">
-          Verified businesses. Luxury stays. Exclusive vehicles. <br className="hidden md:block" /> Curated experiences. <span className="text-white">All in one trusted platform.</span>
+        <p className="text-base md:text-lg lg:text-xl font-sans font-extralight text-white/80 max-w-3xl mx-auto mb-10 md:mb-12 leading-relaxed tracking-wide">
+          Verified businesses. Luxury stays. Exclusive vehicles. <span className="block mt-2 md:mt-0 md:inline">Real estate. Experiences.</span> <span className="text-white">One powerful platform.</span>
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-8 mb-16 md:mb-20">

@@ -44,7 +44,7 @@ export const Careers: React.FC<CareersProps> = ({ onNavigate }) => {
     >
       <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row gap-20 items-center">
         <div className="w-full lg:w-1/2">
-          <h2 className="text-[10px] uppercase tracking-[0.5em] text-luxury-gold mb-6 font-sans font-medium">Excellence is a Choice — Join Our Elite Team</h2>
+          <h2 className="text-[10px] uppercase tracking-[0.5em] text-luxury-gold mb-6 font-sans font-medium">Excellence is a Choice - Join Our Elite Team</h2>
           <h3 className="text-4xl md:text-6xl font-serif font-light mb-8 italic text-white/95">Be Part of Mpumalanga’s Digital Revolution</h3>
           <p className="text-xl font-sans font-extralight text-white/90 mb-8 leading-relaxed italic">
             Collaborate with a team that values excellence, integrity, and local growth.

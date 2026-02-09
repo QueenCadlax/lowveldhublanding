@@ -5,6 +5,7 @@ import { Home } from './pages/Home';
 import { Vision } from './pages/Vision';
 import { Ecosystem } from './pages/Ecosystem';
 import { Careers } from './pages/Careers';
+import { Partners } from './pages/Partners';
 import { EarlyAccess } from './pages/EarlyAccess';
 import { PrivacyPolicy } from './pages/PrivacyPolicy';
 import { TermsOfExcellence } from './pages/TermsOfExcellence';
@@ -23,6 +24,7 @@ const App: React.FC = () => {
       case 'vision': return <Vision />;
       case 'ecosystem': return <Ecosystem />;
       case 'careers': return <Careers />;
+      case 'partners': return <Partners />;
       case 'early-access': return <EarlyAccess />;
       case 'privacy': return <PrivacyPolicy />;
       case 'terms': return <TermsOfExcellence />;

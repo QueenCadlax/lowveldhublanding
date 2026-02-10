@@ -33,7 +33,7 @@ DATABASE_URL="file:./dev.db"
 RESEND_API_KEY="re_YOUR_API_KEY_HERE"
 
 # Admin email
-ADMIN_EMAIL="INFO@LOWVELDHUB.CO.ZA"
+ADMIN_EMAIL="info@lowveldhub.co.za"
 ```
 
 ### 4. Initialize the Database
@@ -59,12 +59,12 @@ Go to `http://localhost:5173` and test the form.
 ## 📧 What Happens When User Submits
 
 1. **Email saved** to database (`early_access_signups` table)
-2. **Admin notification** sent to `INFO@LOWVELDHUB.CO.ZA`
+2. **Admin notification** sent to `info@lowveldhub.co.za`
    - Includes: subscriber email, timestamp
 3. **User confirmation** sent to subscriber's email
    - Welcome message
    - Lists all features coming
-   - Launch date (May 2026)
+   - Launch date (July 2026)
 4. **Success message** shown on form
 
 ## 🚀 Deploy to Vercel

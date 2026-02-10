@@ -187,7 +187,7 @@ lowveldhub-luxury-landing/
 |----------|----------|---------|-------|
 | `DATABASE_URL` | Yes | `file:./prisma/dev.db` | SQLite for dev, PostgreSQL for prod |
 | `RESEND_API_KEY` | Yes | `re_xxx...` | Get from [resend.com](https://resend.com) |
-| `ADMIN_EMAIL` | Yes | `INFO@LOWVELDHUB.CO.ZA` | Where signups are notified |
+| `ADMIN_EMAIL` | Yes | `info@lowveldhub.co.za` | Where signups are notified |
 | `GEMINI_API_KEY` | No | (future use) | Reserve for AI features |
 
 ---

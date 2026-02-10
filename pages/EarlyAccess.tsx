@@ -44,7 +44,7 @@ export const EarlyAccess: React.FC = () => {
         </h1>
         <p className="max-w-2xl mx-auto text-lg md:text-xl font-sans font-extralight text-white/50 leading-relaxed mb-16">
           Be the first to experience Mpumalanga’s premium digital ecosystem. <br className="hidden md:block" /> 
-          The ecosystem is launching <span className="text-white">May 2026</span>. Secure your presence today.
+          The ecosystem is launching <span className="text-white">July 2026</span>. Secure your presence today.
         </p>
 
         {/* Primary Early Access Form */}
@@ -102,7 +102,7 @@ export const EarlyAccess: React.FC = () => {
               Be the first to experience the LowveldHub interface. Get notified of private beta openings and exclusive experiences.
             </p>
           </div>
-          <a href="mailto:INFO@LOWVELDHUB.CO.ZA?subject=Early User Interest" className="px-10 py-4 border border-white/20 text-[10px] uppercase tracking-[0.3em] font-sans hover:bg-white hover:text-black hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all duration-500 whitespace-nowrap active:scale-95">
+          <a href="mailto:info@lowveldhub.co.za?subject=Early User Interest" className="px-10 py-4 border border-white/20 text-[10px] uppercase tracking-[0.3em] font-sans hover:bg-white hover:text-black hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all duration-500 whitespace-nowrap active:scale-95">
             Secure My Spot
           </a>
         </div>
@@ -118,7 +118,7 @@ export const EarlyAccess: React.FC = () => {
               Secure a verified position for your business. Priority placement and early-bird listing rates for verified premium providers.
             </p>
           </div>
-          <a href="mailto:INFO@LOWVELDHUB.CO.ZA?subject=Business Pre-listing Inquiry" className="px-10 py-4 border border-white/20 text-[10px] uppercase tracking-[0.3em] font-sans hover:bg-white hover:text-black hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all duration-500 whitespace-nowrap active:scale-95">
+          <a href="mailto:info@lowveldhub.co.za?subject=Business Pre-listing Inquiry" className="px-10 py-4 border border-white/20 text-[10px] uppercase tracking-[0.3em] font-sans hover:bg-white hover:text-black hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all duration-500 whitespace-nowrap active:scale-95">
             Register Business
           </a>
         </div>
@@ -134,7 +134,7 @@ export const EarlyAccess: React.FC = () => {
               Join our network of regional partners and ambassadors. Collaborate on expanding the ecosystem across Mpumalanga.
             </p>
           </div>
-          <a href="mailto:INFO@LOWVELDHUB.CO.ZA?subject=Partnership Interest" className="px-10 py-4 border border-white/20 text-[10px] uppercase tracking-[0.3em] font-sans hover:bg-white hover:text-black hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all duration-500 whitespace-nowrap active:scale-95">
+          <a href="mailto:info@lowveldhub.co.za?subject=Partnership Interest" className="px-10 py-4 border border-white/20 text-[10px] uppercase tracking-[0.3em] font-sans hover:bg-white hover:text-black hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all duration-500 whitespace-nowrap active:scale-95">
             Express Interest
           </a>
         </div>
@@ -146,9 +146,9 @@ export const EarlyAccess: React.FC = () => {
             <p className="text-[10px] uppercase tracking-[0.4em] font-sans text-luxury-gold font-medium">Contact Us Directly</p>
           </div>
         </div>
-        <a href="mailto:INFO@LOWVELDHUB.CO.ZA" className="flex items-center justify-center space-x-4 group hover:scale-[1.05] active:scale-95 transition-all duration-700">
+        <a href="mailto:info@lowveldhub.co.za" className="flex items-center justify-center space-x-4 group hover:scale-[1.05] active:scale-95 transition-all duration-700">
           <Mail className="w-6 h-6 text-luxury-gold group-hover:scale-125 transition-transform duration-700" />
-          <span className="text-3xl md:text-5xl font-serif text-white group-hover:text-luxury-gold transition-colors italic tracking-widest drop-shadow-[0_0_10px_rgba(212,175,55,0)] group-hover:drop-shadow-[0_0_15px_rgba(212,175,55,0.4)]">INFO@LOWVELDHUB.CO.ZA</span>
+          <span className="text-3xl md:text-5xl font-serif text-white group-hover:text-luxury-gold transition-colors italic tracking-widest drop-shadow-[0_0_10px_rgba(212,175,55,0)] group-hover:drop-shadow-[0_0_15px_rgba(212,175,55,0.4)]">info@lowveldhub.co.za</span>
         </a>
       </div>
     </div>

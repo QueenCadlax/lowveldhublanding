@@ -63,19 +63,19 @@ export const Partners: React.FC = () => {
           </div>
 
           <div className="inline-flex items-center space-x-3 mb-12 px-4 py-1.5 border border-luxury-gold/20 rounded-full bg-luxury-gold/5">
-            <span className="text-[10px] uppercase tracking-[0.4em] font-sans text-luxury-gold">Launching May 2026 - Early Partner Applications Now Open</span>
+            <span className="text-[10px] uppercase tracking-[0.4em] font-sans text-luxury-gold">Launching July 2026 - Early Partner Applications Now Open</span>
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 
-              href="mailto:INFO@LOWVELDHUB.CO.ZA?subject=Partnership Listing Application - LowveldHub"
+              href="mailto:info@lowveldhub.co.za?subject=Partnership Listing Application - LowveldHub"
               className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-luxury-gold text-black font-sans font-bold text-xs uppercase tracking-[0.4em] transition-all duration-500 hover:shadow-[0_0_60px_rgba(212,175,55,0.5)] hover:scale-[1.03] active:scale-95 group rounded-lg"
             >
               <span>Apply for Listing</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
             </a>
             <button 
-              onClick={() => window.location.href = "mailto:INFO@LOWVELDHUB.CO.ZA?subject=Partnership Call Request - LowveldHub"}
+              onClick={() => window.location.href = "mailto:info@lowveldhub.co.za?subject=Partnership Call Request - LowveldHub"}
               className="inline-flex items-center justify-center gap-3 px-8 py-4 border border-white/20 hover:border-luxury-goldLight text-white/90 hover:text-white font-sans font-light text-xs uppercase tracking-[0.4em] transition-all duration-500 hover:bg-white/[0.05] hover:scale-[1.03] active:scale-95 group rounded-lg"
             >
               <span>Request Partnership Call</span>
@@ -178,7 +178,7 @@ export const Partners: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-serif font-light mb-8 text-white">
               Early Partner Advantage
             </h2>
-            <p className="text-lg font-sans font-extralight text-white/60">Launching May 2026</p>
+            <p className="text-lg font-sans font-extralight text-white/60">Launching July 2026</p>
           </div>
 
           <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-12 mb-12">
@@ -216,7 +216,7 @@ export const Partners: React.FC = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <a 
-              href="mailto:INFO@LOWVELDHUB.CO.ZA?subject=Partnership Listing Application - LowveldHub"
+              href="mailto:info@lowveldhub.co.za?subject=Partnership Listing Application - LowveldHub"
               className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-luxury-gold text-black font-sans font-bold text-sm uppercase tracking-[0.4em] transition-all duration-500 hover:shadow-[0_0_60px_rgba(212,175,55,0.5)] hover:scale-[1.03] active:scale-95 group rounded-lg"
             >
               <span>Apply for Listing</span>
@@ -225,7 +225,7 @@ export const Partners: React.FC = () => {
           </div>
 
           <p className="text-sm font-sans font-extralight text-white/50">
-            or email: <span className="text-white/70">INFO@LOWVELDHUB.CO.ZA</span>
+            or email: <span className="text-white/70">info@lowveldhub.co.za</span>
           </p>
         </div>
       </section>

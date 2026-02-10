@@ -46,7 +46,7 @@ export const Hero: React.FC = () => {
         <div className="relative pt-8 md:pt-12">
           <div className="flex items-center justify-center mb-8">
             <p className="text-lg sm:text-2xl md:text-3xl font-serif italic text-gold-gradient tracking-[0.3em] md:tracking-[0.45em] animate-soft-pulse drop-shadow-[0_0_10px_rgba(212,175,55,0.2)]">
-              Launching May 2026
+              Launching July 2026
             </p>
           </div>
           <div className="w-px h-12 md:h-16 bg-gradient-to-b from-luxury-gold to-transparent mx-auto opacity-30"></div>

@@ -7,8 +7,8 @@ interface CareersProps {
 
 const positions = [
   "Field Agents", "Team Leaders", "Business Development Officers", 
-  "Sales & Partnerships Agents", "Content Creators & Social Media Scouts",
-  "Community Managers", "Regional Ambassadors"
+  "Finance & Payments Administrator", "Marketing & Social Media Coordinator",
+  "Customer Relations & Support Specialist", "Provincial Sales Manager"
 ];
 
 export const Careers: React.FC<CareersProps> = ({ onNavigate }) => {

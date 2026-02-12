@@ -43,58 +43,60 @@ const jobRoles = [
     ]
   },
   {
-    title: "Sales & Partnerships Agents",
-    category: "Sales & Partnerships",
-    purpose: "Drive platform monetization through sales of premium listings, ads, and memberships.",
-    responsibilities: [
-      "Sell premium listings",
-      "Onboard advertisers",
-      "Pitch platform services",
-      "Maintain client relationships",
-      "Upsell platform features",
-      "Monthly sales reporting"
-    ]
-  },
-  {
-    title: "Content Creators & Social Media Scouts",
-    category: "Creative",
-    purpose: "Discover, capture, and promote Mpumalanga’s finest experiences and businesses.",
-    responsibilities: [
-      "Identify viral-worthy content",
-      "Capture photos & short videos",
-      "Discover trending locations",
-      "Create platform content",
-      "Assist social media campaigns",
-      "Promote businesses organically"
-    ]
-  },
-  {
-    title: "Community Managers",
+    title: "Finance & Payments Administrator",
     category: "Operations",
-    purpose: "Manage user engagement and business relationships.",
+    purpose: "Manage financial transactions, payments, and platform accounting.",
     responsibilities: [
-      "Manage community interactions",
-      "Handle onboarding queries",
-      "Support businesses & users",
-      "Moderate reviews & feedback",
-      "Maintain platform trust"
+      "Process business payments",
+      "Reconcile financial records",
+      "Manage payment systems",
+      "Generate financial reports",
+      "Ensure compliance and accuracy",
+      "Support vendor relationships"
     ]
   },
   {
-    title: "Regional Ambassadors",
-    category: "Brand",
-    purpose: "Represent LowveldHub in towns and districts.",
+    title: "Marketing & Social Media Coordinator",
+    category: "Creative",
+    purpose: "Drive brand awareness and engagement across digital channels.",
     responsibilities: [
-      "Represent brand locally",
-      "Build regional partnerships",
-      "Promote platform adoption",
-      "Attend events",
-      "Community engagement"
+      "Create social media content",
+      "Manage platform campaigns",
+      "Coordinate brand messaging",
+      "Analyze engagement metrics",
+      "Promote partner businesses",
+      "Build community presence"
+    ]
+  },
+  {
+    title: "Customer Relations & Support Specialist",
+    category: "Operations",
+    purpose: "Provide exceptional support to users and businesses on the platform.",
+    responsibilities: [
+      "Handle customer inquiries",
+      "Resolve platform issues",
+      "Manage onboarding queries",
+      "Maintain user satisfaction",
+      "Process feedback and complaints",
+      "Build lasting relationships"
+    ]
+  },
+  {
+    title: "Provincial Sales Manager",
+    category: "Sales & Partnerships",
+    purpose: "Lead sales strategy and manage premium partnerships across Mpumalanga.",
+    responsibilities: [
+      "Develop sales strategy",
+      "Manage regional sales team",
+      "Secure major partnerships",
+      "Drive subscription revenue",
+      "Set and achieve targets",
+      "Report on market performance"
     ]
   }
 ];
 
-const categories = ["All Positions", "Operations", "Management", "Sales & Partnerships", "Creative", "Brand"];
+const categories = ["All Positions", "Operations", "Management", "Sales & Partnerships", "Creative"];
 
 export const Careers: React.FC = () => {
   const [selectedRole, setSelectedRole] = useState<string | null>(null);

@@ -11,6 +11,7 @@ import { PrivacyPolicy } from './pages/PrivacyPolicy';
 import { TermsOfExcellence } from './pages/TermsOfExcellence';
 import { Footer } from './components/Footer';
 import { BackToTop } from './components/BackToTop';
+import { SEOSchemaManager } from './components/SEOSchemaManager';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState('home');
@@ -34,6 +35,9 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-luxury-black text-white overflow-x-hidden selection:bg-luxury-gold selection:text-black">
+      {/* SEO Schema Markup */}
+      <SEOSchemaManager />
+
       {/* Dynamic Background Accents */}
       <div className="fixed inset-0 pointer-events-none z-0">
         <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-luxury-gold/5 blur-[120px] rounded-full animate-pulse"></div>

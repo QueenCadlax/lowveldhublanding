@@ -1,4 +1,5 @@
 import React from 'react';
+import { About } from '../components/About';
 import { Features } from '../components/Features';
 import { Careers } from '../components/Careers';
 import { ChevronDown } from 'lucide-react';
@@ -109,7 +110,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
           <div className="mt-16 md:mt-24 animate-in fade-in duration-700 relative">
             <div className="flex items-center justify-center mb-6">
               <p className="text-lg sm:text-xl md:text-2xl font-serif italic text-gold-gradient tracking-[0.25em] md:tracking-[0.35em] drop-shadow-[0_0_15px_rgba(212,175,55,0.3)] leading-tight">
-                Launching July 2026
+                Launching May 2026
               </p>
             </div>
             <div className="w-[1px] h-12 md:h-16 bg-gradient-to-b from-luxury-gold/60 via-luxury-gold/5 to-transparent mx-auto"></div>
@@ -124,6 +125,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         </div>
       </section>
       
+      <About onNavigate={onNavigate} />
       <Features />
       <Careers onNavigate={onNavigate} />
     </>

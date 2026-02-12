@@ -55,8 +55,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <h5 className="text-[10px] uppercase tracking-[0.4em] font-sans text-white/60 mb-6 font-medium">Contact</h5>
             <ul className="space-y-3 text-sm font-sans font-extralight text-white/40">
               <li>
-                <a href="mailto:info@lowveldhub.co.za" className="hover:text-luxury-gold transition-colors block">
-                  info@lowveldhub.co.za
+                <a href="mailto:INFO@LOWVELDHUB.CO.ZA" className="hover:text-luxury-gold transition-colors block">
+                  INFO@LOWVELDHUB.CO.ZA
                 </a>
               </li>
               <li className="text-[10px] text-white/20 tracking-[0.2em] uppercase pt-2">

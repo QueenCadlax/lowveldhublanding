@@ -43,60 +43,58 @@ const jobRoles = [
     ]
   },
   {
-    title: "Finance & Payments Administrator",
-    category: "Operations",
-    purpose: "Manage financial transactions, payments, and platform accounting.",
-    responsibilities: [
-      "Process business payments",
-      "Reconcile financial records",
-      "Manage payment systems",
-      "Generate financial reports",
-      "Ensure compliance and accuracy",
-      "Support vendor relationships"
-    ]
-  },
-  {
-    title: "Marketing & Social Media Coordinator",
-    category: "Creative",
-    purpose: "Drive brand awareness and engagement across digital channels.",
-    responsibilities: [
-      "Create social media content",
-      "Manage platform campaigns",
-      "Coordinate brand messaging",
-      "Analyze engagement metrics",
-      "Promote partner businesses",
-      "Build community presence"
-    ]
-  },
-  {
-    title: "Customer Relations & Support Specialist",
-    category: "Operations",
-    purpose: "Provide exceptional support to users and businesses on the platform.",
-    responsibilities: [
-      "Handle customer inquiries",
-      "Resolve platform issues",
-      "Manage onboarding queries",
-      "Maintain user satisfaction",
-      "Process feedback and complaints",
-      "Build lasting relationships"
-    ]
-  },
-  {
-    title: "Provincial Sales Manager",
+    title: "Sales & Partnerships Agents",
     category: "Sales & Partnerships",
-    purpose: "Lead sales strategy and manage premium partnerships across Mpumalanga.",
+    purpose: "Drive platform monetization through sales of premium listings, ads, and memberships.",
     responsibilities: [
-      "Develop sales strategy",
-      "Manage regional sales team",
-      "Secure major partnerships",
-      "Drive subscription revenue",
-      "Set and achieve targets",
-      "Report on market performance"
+      "Sell premium listings",
+      "Onboard advertisers",
+      "Pitch platform services",
+      "Maintain client relationships",
+      "Upsell platform features",
+      "Monthly sales reporting"
+    ]
+  },
+  {
+    title: "Content Creators & Social Media Scouts",
+    category: "Creative",
+    purpose: "Discover, capture, and promote Mpumalanga’s finest experiences and businesses.",
+    responsibilities: [
+      "Identify viral-worthy content",
+      "Capture photos & short videos",
+      "Discover trending locations",
+      "Create platform content",
+      "Assist social media campaigns",
+      "Promote businesses organically"
+    ]
+  },
+  {
+    title: "Community Managers",
+    category: "Operations",
+    purpose: "Manage user engagement and business relationships.",
+    responsibilities: [
+      "Manage community interactions",
+      "Handle onboarding queries",
+      "Support businesses & users",
+      "Moderate reviews & feedback",
+      "Maintain platform trust"
+    ]
+  },
+  {
+    title: "Regional Ambassadors",
+    category: "Brand",
+    purpose: "Represent LowveldHub in towns and districts.",
+    responsibilities: [
+      "Represent brand locally",
+      "Build regional partnerships",
+      "Promote platform adoption",
+      "Attend events",
+      "Community engagement"
     ]
   }
 ];
 
-const categories = ["All Positions", "Operations", "Management", "Sales & Partnerships", "Creative"];
+const categories = ["All Positions", "Operations", "Management", "Sales & Partnerships", "Creative", "Brand"];
 
 export const Careers: React.FC = () => {
   const [selectedRole, setSelectedRole] = useState<string | null>(null);
@@ -206,8 +204,8 @@ export const Careers: React.FC = () => {
 
         <div className="text-center py-20 border-t border-white/5">
           <p className="text-sm font-sans font-extralight text-white/40 mb-4">Direct applications to</p>
-          <a href="mailto:info@lowveldhub.co.za" className="text-3xl md:text-5xl font-serif text-white hover:text-luxury-gold transition-all duration-500 italic tracking-widest underline decoration-luxury-gold/30 underline-offset-8 hover:decoration-luxury-gold inline-block hover:scale-[1.02] active:scale-95">
-            info@lowveldhub.co.za
+          <a href="mailto:INFO@LOWVELDHUB.CO.ZA" className="text-3xl md:text-5xl font-serif text-white hover:text-luxury-gold transition-all duration-500 italic tracking-widest underline decoration-luxury-gold/30 underline-offset-8 hover:decoration-luxury-gold inline-block hover:scale-[1.02] active:scale-95">
+            INFO@LOWVELDHUB.CO.ZA
           </a>
         </div>
       </div>
@@ -237,7 +235,7 @@ export const Careers: React.FC = () => {
                 <div>
                   <h4 className="text-[11px] uppercase tracking-[0.3em] font-sans text-white/80 mb-2">Step 1: Compose Email</h4>
                   <p className="text-sm font-sans font-extralight text-white/50 leading-relaxed">
-                    Direct your application to <span className="text-white font-medium">info@lowveldhub.co.za</span>
+                    Direct your application to <span className="text-white font-medium">INFO@LOWVELDHUB.CO.ZA</span>
                   </p>
                 </div>
               </div>
@@ -277,7 +275,7 @@ export const Careers: React.FC = () => {
 
             <div className="mt-16 pt-10 border-t border-white/5">
               <a 
-                href={`mailto:info@lowveldhub.co.za?subject=Application for ${selectedRole}`}
+                href={`mailto:INFO@LOWVELDHUB.CO.ZA?subject=Application for ${selectedRole}`}
                 className="w-full inline-flex items-center justify-center px-10 py-5 bg-luxury-gold text-black font-sans font-bold text-[10px] uppercase tracking-[0.4em] transition-all duration-500 hover:shadow-[0_0_60px_rgba(212,175,55,0.6)] hover:scale-[1.03] active:scale-95"
               >
                 Apply Now

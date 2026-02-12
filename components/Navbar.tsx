@@ -73,22 +73,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
 
       {/* Mobile Navigation Menu */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-[9999] bg-luxury-black md:hidden">
-          <div className="flex flex-col items-center justify-start pt-20 space-y-12 h-full relative md:justify-center">
-            {/* Close Button */}
-            <button
-              onClick={() => setMobileMenuOpen(false)}
-              className="absolute top-6 right-6 text-white/60 hover:text-luxury-gold transition-colors outline-none"
-            >
-              <X className="w-6 h-6" />
-            </button>
-
+        <div className="fixed inset-0 top-[72px] z-50 bg-gradient-to-b from-luxury-black/99 via-luxury-black/95 to-black/90 backdrop-blur-xl md:hidden">
+          <div className="flex flex-col items-center justify-center space-y-12 px-6 py-24 min-h-screen">
             <button 
               onClick={() => {
                 onNavigate('careers');
                 setMobileMenuOpen(false);
               }}
-              className="text-base uppercase tracking-[0.15em] font-sans font-medium text-white hover:text-luxury-gold transition-colors duration-300 outline-none"
+              className="text-sm uppercase tracking-[0.12em] font-sans font-light text-white/80 hover:text-luxury-gold transition-colors duration-300"
             >
               Careers
             </button>
@@ -97,7 +89,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
                 onNavigate('partners');
                 setMobileMenuOpen(false);
               }}
-              className="px-12 py-4 text-base uppercase tracking-[0.15em] font-sans font-medium text-white hover:text-luxury-gold transition-all duration-500 outline-none"
+              className="px-10 py-3 border border-luxury-gold/40 hover:border-luxury-gold text-white/80 hover:text-luxury-gold text-sm uppercase tracking-[0.12em] font-sans font-light transition-all duration-500 hover:bg-luxury-gold/5"
             >
               Partner With Us
             </button>

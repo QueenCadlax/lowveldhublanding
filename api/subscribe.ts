@@ -83,7 +83,7 @@ export default async function handler(req: any, res: any) {
 
             <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #D4AF37/30;">
               <p style="font-size: 12px; color: #666; letter-spacing: 0.1em; text-transform: uppercase; margin: 0;">Mpumalanga's Premium Digital Ecosystem</p>
-              <p style="font-size: 11px; color: #555; margin: 10px 0 0 0;">Launching May 2026</p>
+              <p style="font-size: 11px; color: #555; margin: 10px 0 0 0;">Launching July 2026</p>
             </div>
           </div>
         `,
@@ -121,7 +121,7 @@ export default async function handler(req: any, res: any) {
             </div>
 
             <div style="margin: 30px 0; text-align: center;">
-              <p style="color: #D4AF37; font-size: 24px; letter-spacing: 0.2em; margin: 0;">LAUNCHING MAY 2026</p>
+              <p style="color: #D4AF37; font-size: 24px; letter-spacing: 0.2em; margin: 0;">LAUNCHING JULY 2026</p>
             </div>
 
             <p style="font-size: 14px; color: #999; line-height: 1.6; margin-top: 30px;">

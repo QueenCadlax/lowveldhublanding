@@ -91,6 +91,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             © 2026 LowveldHub. All Rights Reserved.
           </p>
           <div className="flex space-x-8 text-[10px] uppercase tracking-[0.3em] font-sans text-white/30">
+            <button onClick={() => onNavigate('vision')} className="hover:text-white transition-colors">
+              Vision
+            </button>
+            <span className="text-white/10">•</span>
             <button onClick={() => onNavigate('privacy')} className="hover:text-white transition-colors">
               Privacy Policy
             </button>

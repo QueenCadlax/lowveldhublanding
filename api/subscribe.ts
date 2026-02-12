@@ -17,7 +17,7 @@ try {
   throw error;
 }
 
-const ADMIN_EMAIL = getEnv('ADMIN_EMAIL', 'INFO@LOWVELDHUB.CO.ZA');
+const ADMIN_EMAIL = getEnv('ADMIN_EMAIL', 'info@lowveldhub.co.za');
 
 /**
  * Email Validation using utility function

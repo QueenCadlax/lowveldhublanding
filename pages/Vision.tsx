@@ -30,6 +30,10 @@ export const Vision: React.FC = () => {
             <h3 className="text-3xl md:text-5xl font-serif text-gold-gradient mb-6">This is more than a platform.</h3>
             <p className="text-[12px] uppercase tracking-[0.8em] text-white/40 font-sans">This is a movement shaping the digital future of Mpumalanga.</p>
           </div>
+
+          <button className="mt-6 px-8 py-3 border border-luxury-gold text-luxury-gold hover:bg-luxury-gold hover:text-black transition-all duration-500 text-sm uppercase tracking-[0.3em] font-sans">
+            Discover More
+          </button>
         </div>
       </div>
 

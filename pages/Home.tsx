@@ -1,5 +1,4 @@
 import React from 'react';
-import { About } from '../components/About';
 import { Features } from '../components/Features';
 import { Careers } from '../components/Careers';
 import { ChevronDown } from 'lucide-react';
@@ -127,7 +126,6 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         </div>
       </section>
       
-      <About onNavigate={onNavigate} />
       <Features />
       <Careers onNavigate={onNavigate} />
     </>

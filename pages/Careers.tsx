@@ -204,8 +204,8 @@ export const Careers: React.FC = () => {
 
         <div className="text-center py-20 border-t border-white/5">
           <p className="text-sm font-sans font-extralight text-white/40 mb-4">Direct applications to</p>
-          <a href="mailto:INFO@LOWVELDHUB.CO.ZA" className="text-3xl md:text-5xl font-serif text-white hover:text-luxury-gold transition-all duration-500 italic tracking-widest underline decoration-luxury-gold/30 underline-offset-8 hover:decoration-luxury-gold inline-block hover:scale-[1.02] active:scale-95">
-            INFO@LOWVELDHUB.CO.ZA
+          <a href="mailto:info@lowveldhub.co.za" className="text-3xl md:text-5xl font-serif text-white hover:text-luxury-gold transition-all duration-500 italic tracking-widest underline decoration-luxury-gold/30 underline-offset-8 hover:decoration-luxury-gold inline-block hover:scale-[1.02] active:scale-95">
+            info@lowveldhub.co.za
           </a>
         </div>
       </div>
@@ -235,7 +235,7 @@ export const Careers: React.FC = () => {
                 <div>
                   <h4 className="text-[11px] uppercase tracking-[0.3em] font-sans text-white/80 mb-2">Step 1: Compose Email</h4>
                   <p className="text-sm font-sans font-extralight text-white/50 leading-relaxed">
-                    Direct your application to <span className="text-white font-medium">INFO@LOWVELDHUB.CO.ZA</span>
+                    Direct your application to <span className="text-white font-medium">info@lowveldhub.co.za</span>
                   </p>
                 </div>
               </div>
@@ -275,7 +275,7 @@ export const Careers: React.FC = () => {
 
             <div className="mt-16 pt-10 border-t border-white/5">
               <a 
-                href={`mailto:INFO@LOWVELDHUB.CO.ZA?subject=Application for ${selectedRole}`}
+                href={`mailto:info@lowveldhub.co.za?subject=Application for ${selectedRole}`}
                 className="w-full inline-flex items-center justify-center px-10 py-5 bg-luxury-gold text-black font-sans font-bold text-[10px] uppercase tracking-[0.4em] transition-all duration-500 hover:shadow-[0_0_60px_rgba(212,175,55,0.6)] hover:scale-[1.03] active:scale-95"
               >
                 Apply Now

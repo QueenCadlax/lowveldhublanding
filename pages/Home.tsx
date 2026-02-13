@@ -48,13 +48,6 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
     }
   };
 
-  const scrollToEarlyAccess = () => {
-    const accessSection = document.getElementById('early-access');
-    if (accessSection) {
-      accessSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <>
       <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden bg-[#020203]">
@@ -80,13 +73,6 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         <ParticleContainer />
 
         <div className="relative z-50 text-center px-6 max-w-6xl py-12">
-          {/* Brand Header Label */}
-          <div className="inline-block mb-8 md:mb-10 px-6 md:px-8 py-2 border border-luxury-gold/20 rounded-full bg-black/40 backdrop-blur-3xl animate-in fade-in zoom-in duration-500">
-            <span className="text-[9px] md:text-[11px] uppercase tracking-[0.4em] md:tracking-[0.5em] font-sans text-luxury-goldLight font-medium">
-              Private Early Access - Now Open
-            </span>
-          </div>
-          
           <div className="relative inline-block mb-6 md:mb-10 animate-in fade-in slide-in-from-bottom-8 duration-700 w-full">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-light tracking-tight leading-tight text-white drop-shadow-[0_0_40px_rgba(255,255,255,0.08)]">
               Mpumalanga's <span className="text-luxury-gold">Premium</span> Digital Ecosystem
@@ -97,19 +83,9 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             Verified professionals, essential services & premium businesses - all in one trusted platform.
           </p>
 
-          <button 
-            onClick={scrollToEarlyAccess}
-            className="group relative px-10 md:px-16 py-5 md:py-6 bg-luxury-gold text-black font-sans font-bold text-xs uppercase tracking-[0.3em] md:tracking-[0.45em] transition-all duration-500 hover:shadow-[0_0_50px_rgba(212,175,55,0.5)] hover:scale-[1.03] active:scale-95 overflow-hidden animate-in fade-in slide-in-from-bottom-8 duration-700"
-          >
-            <span className="relative z-10">Request Invitation</span>
-            <div className="absolute inset-0 bg-white/10 -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
-          </button>
-
-
-
           <div className="mt-16 md:mt-24 animate-in fade-in duration-700 relative">
             <div className="flex items-center justify-center mb-6">
-              <p className="text-lg sm:text-xl md:text-2xl font-serif italic text-gold-gradient tracking-[0.25em] md:tracking-[0.35em] drop-shadow-[0_0_15px_rgba(212,175,55,0.3)] leading-tight">
+              <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-luxury-gold tracking-[0.15em] md:tracking-[0.2em] drop-shadow-[0_0_30px_rgba(212,175,55,0.6)] leading-tight animate-pulse-subtle">
                 Launching July 2026
               </p>
             </div>

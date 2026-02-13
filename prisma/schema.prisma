@@ -14,4 +14,11 @@ model EarlyAccessSignup {
   id        Int     @id @default(autoincrement())
   email     String  @unique
   createdAt DateTime @default(now())
+  
+  // Future metadata fields for tracking
+  // referralSource String?  // e.g., "organic", "social", "email"
+  // userAgentString String? // Browser/device info
+  // ipAddress String?       // Client IP (for analytics, privacy considered)
+  // confirmed Boolean @default(false) // Whether user clicked confirmation email
 }
+

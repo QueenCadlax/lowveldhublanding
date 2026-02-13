@@ -3,7 +3,7 @@ import { PrismaClient } from '@prisma/client';
 import { Resend } from 'resend';
 import { validateEnv, getEnv } from '../lib/env';
 import { successResponse, errorResponse, HTTP_STATUS } from '../lib/api-response';
-import { validateEmail, normalizeEmail } from '../lib/validation';
+import { validateEmail, normalizeEmail, signupRateLimiter } from '../lib/validation';
 
 const prisma = new PrismaClient();
 
@@ -39,6 +39,16 @@ export default async function handler(req: any, res: any) {
   }
 
   const { email } = req.body;
+  
+  // Get client IP for rate limiting
+  const clientIP = req.headers['x-forwarded-for'] || req.socket.remoteAddress || 'unknown';
+
+  // Rate limiting check
+  if (!signupRateLimiter.isAllowed(clientIP)) {
+    return res.status(429).json(
+      errorResponse('Too many signup attempts. Please wait before trying again.')
+    );
+  }
 
   // Validate email
   if (!email || typeof email !== 'string' || !isValidEmail(email)) {
@@ -48,21 +58,23 @@ export default async function handler(req: any, res: any) {
   }
 
   try {
-    // Check if email already exists
-    const existingSignup = await pri (normalized)
+    // Normalize and sanitize email
     const normalizedEmail = normalizeEmail(email);
+
+    // Check if email already exists
     const existingSignup = await prisma.earlyAccessSignup.findUnique({
-      where: { email: normalizedEmail
+      where: { email: normalizedEmail },
+    });
 
     if (existingSignup) {
       return res.status(HTTP_STATUS.CONFLICT).json(
         successResponse('This email is already on our exclusive list.')
       );
     }
- (normalized)
+
+    // Create new signup record
     const signup = await prisma.earlyAccessSignup.create({
-      data: { email: normalizedEmailessSignup.create({
-      data: { email: email.toLowerCase() },
+      data: { email: normalizedEmail },
     });
 
     // Send notification email to admin

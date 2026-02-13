@@ -1,15 +1,39 @@
 
 import React, { useState } from 'react';
-import { Mail, Briefcase, UserCheck, Layout, Loader2, Check, ArrowRight } from 'lucide-react';
+import { Mail, Briefcase, UserCheck, Layout, Loader2, Check, AlertCircle } from 'lucide-react';
+import { validateEmail } from '../lib/validation';
 
 export const EarlyAccess: React.FC = () => {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
+  const [emailError, setEmailError] = useState('');
+
+  // Real-time email validation
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setEmail(value);
+    
+    if (!value) {
+      setEmailError('');
+      return;
+    }
+
+    if (!validateEmail(value)) {
+      setEmailError('Please enter a valid email address');
+    } else {
+      setEmailError('');
+    }
+  };
 
   const handleMainSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email) return;
+    
+    if (!email || emailError) {
+      setStatus('error');
+      setMessage('Please enter a valid email address.');
+      return;
+    }
 
     setStatus('loading');
     try {
@@ -21,19 +45,29 @@ export const EarlyAccess: React.FC = () => {
 
       const data = await response.json();
       
-      if (response.ok) {
+      if (response.ok || response.status === 409) {
         setStatus('success');
-        setMessage(data.message);
+        setMessage(
+          response.status === 409
+            ? "✨ You're already on our exclusive list!"
+            : data.message || 'Your seat among the elite is reserved. Check your email.'
+        );
         setEmail('');
+        setTimeout(() => {
+          setStatus('idle');
+          setMessage('');
+        }, 6000);
       } else {
         setStatus('error');
-        setMessage(data.message);
+        setMessage(data.message || 'Connection failed. Please try again.');
       }
     } catch (err) {
       setStatus('error');
       setMessage('Our network is currently exclusive. Please try again.');
     }
   };
+
+  const isFormValid = email && !emailError && status !== 'loading' && status !== 'success';
 
   return (
     <div className="py-20 px-6 max-w-5xl mx-auto">
@@ -50,37 +84,53 @@ export const EarlyAccess: React.FC = () => {
         {/* Primary Early Access Form */}
         <div className="max-w-xl mx-auto relative">
           <div className="absolute inset-0 bg-luxury-gold/5 blur-3xl rounded-full -z-10"></div>
-          <form onSubmit={handleMainSubmit} className="space-y-6">
-            <div className="flex flex-col sm:flex-row gap-4 p-2 bg-white/[0.02] border border-white/10 backdrop-blur-xl shadow-2xl">
-              <input 
-                type="email" 
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email" 
-                required
-                disabled={status === 'loading' || status === 'success'}
-                className="bg-transparent px-6 py-5 text-sm font-sans font-light outline-none flex-grow disabled:opacity-50 text-white placeholder:text-white/20"
-              />
-              <button 
-                type="submit"
-                disabled={status === 'loading' || status === 'success'}
-                className={`px-10 py-5 bg-luxury-gold text-black font-sans font-bold text-xs uppercase tracking-[0.3em] transition-all duration-500 whitespace-nowrap ${
-                  status === 'success' 
-                    ? 'bg-green-500/80 text-white cursor-default' 
-                    : 'hover:shadow-[0_0_50px_rgba(212,175,55,0.5)] hover:scale-[1.02] active:scale-95'
-                }`}
-              >
-                {status === 'loading' ? (
-                  <Loader2 className="w-4 h-4 animate-spin mx-auto" />
-                ) : status === 'success' ? (
-                  <Check className="w-4 h-4 mx-auto" />
-                ) : (
-                  'Notify Me'
-                )}
-              </button>
+          <form onSubmit={handleMainSubmit} className="space-y-6" noValidate>
+            <div className="space-y-2">
+              <div className="flex flex-col sm:flex-row gap-4 p-2 bg-white/[0.02] border border-white/10 backdrop-blur-xl shadow-2xl focus-within:border-luxury-gold/50 transition-all duration-500">
+                <input 
+                  type="email" 
+                  value={email}
+                  onChange={handleEmailChange}
+                  placeholder="Enter your email" 
+                  required
+                  disabled={status === 'loading' || status === 'success'}
+                  maxLength={254}
+                  className="bg-transparent px-6 py-5 text-sm font-sans font-light outline-none flex-grow disabled:opacity-50 text-white placeholder:text-white/20"
+                  aria-label="Email address"
+                  aria-invalid={!!emailError}
+                />
+                <button 
+                  type="submit"
+                  disabled={!isFormValid}
+                  className={`px-10 py-5 font-sans font-bold text-xs uppercase tracking-[0.3em] transition-all duration-500 whitespace-nowrap ${
+                    status === 'success' 
+                      ? 'bg-green-500/80 text-white cursor-default' 
+                      : !isFormValid
+                      ? 'bg-luxury-gold/40 text-black/40 cursor-not-allowed'
+                      : 'bg-luxury-gold text-black hover:shadow-[0_0_50px_rgba(212,175,55,0.5)] hover:scale-[1.02] active:scale-95'
+                  }`}
+                >
+                  {status === 'loading' ? (
+                    <Loader2 className="w-4 h-4 animate-spin mx-auto" />
+                  ) : status === 'success' ? (
+                    <Check className="w-4 h-4 mx-auto" />
+                  ) : status === 'error' ? (
+                    <AlertCircle className="w-4 h-4 mx-auto" />
+                  ) : (
+                    'Notify Me'
+                  )}
+                </button>
+              </div>
+              
+              {emailError && status !== 'success' && (
+                <div className="text-red-400 text-xs font-sans animate-in fade-in px-4">
+                  {emailError}
+                </div>
+              )}
             </div>
+            
             {message && (
-              <p className={`text-[10px] uppercase tracking-[0.3em] font-sans italic transition-all duration-500 ${status === 'error' ? 'text-red-400' : 'text-luxury-gold'}`}>
+              <p className={`text-[10px] uppercase tracking-[0.3em] font-sans italic transition-all duration-500 ${status === 'error' ? 'text-red-400' : status === 'success' ? 'text-green-400' : 'text-luxury-gold'}`}>
                 {message}
               </p>
             )}

@@ -74,7 +74,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
       {/* Mobile Navigation Menu */}
       {mobileMenuOpen && (
         <div className="fixed inset-0 top-[72px] z-50 bg-gradient-to-b from-luxury-black/99 via-luxury-black/95 to-black/90 backdrop-blur-xl md:hidden">
-          <div className="flex flex-col items-center justify-center space-y-8 px-6 py-12 min-h-screen">
+          <div className="flex flex-col items-center justify-start space-y-6 px-6 pt-6">
             <button 
               onClick={() => {
                 onNavigate('careers');

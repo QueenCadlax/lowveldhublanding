@@ -98,7 +98,7 @@ export const EarlyAccess: React.FC = () => {
       <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
         <h2 className="text-4xl md:text-6xl font-serif font-light mb-6">Request Your <span className="italic text-gold-gradient">Invitation</span></h2>
         <p className="text-lg md:text-xl font-sans font-extralight text-white/60 mb-16 leading-relaxed max-w-2xl mx-auto">
-          Join Mpumalanga's most exclusive digital platform. Limited spots available for visionaries.
+          Join Mpumalanga's most exclusive digital platform. <span className="font-serif text-lg md:text-2xl font-light italic text-gold-gradient tracking-[0.2em] drop-shadow-[0_0_20px_rgba(212,175,55,0.4)]">Launching July 2026</span>. Limited spots available for visionaries.
         </p>
 
         <div className="max-w-xl mx-auto">

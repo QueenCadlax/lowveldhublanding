@@ -63,7 +63,7 @@ export const Partners: React.FC = () => {
           </div>
 
           <div className="inline-flex items-center space-x-3 mb-12 px-4 py-1.5 border border-luxury-gold/20 rounded-full bg-luxury-gold/5">
-            <span className="text-[10px] uppercase tracking-[0.4em] font-sans text-luxury-gold">Launching July 2026 - Early Partner Applications Now Open</span>
+            <span className="text-[10px] uppercase tracking-[0.4em] font-serif font-semibold text-luxury-gold drop-shadow-[0_0_10px_rgba(212,175,55,0.4)]">Launching July 2026 - Early Partner Applications Now Open</span>
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -178,7 +178,7 @@ export const Partners: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-serif font-light mb-8 text-white">
               Early Partner Advantage
             </h2>
-            <p className="text-lg font-sans font-extralight text-white/60">Launching July 2026</p>
+            <p className="text-lg md:text-2xl font-serif font-light italic text-white/60"><span className="text-gold-gradient drop-shadow-[0_0_15px_rgba(212,175,55,0.3)] tracking-[0.15em]">Launching July 2026</span></p>
           </div>
 
           <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-12 mb-12">

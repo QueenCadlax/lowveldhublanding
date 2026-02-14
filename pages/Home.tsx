@@ -102,7 +102,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
       </section>
       
       <About onNavigate={onNavigate} />
-      <Features />
+      <Features onNavigate={onNavigate} />
       <Careers onNavigate={onNavigate} />
     </>
   );

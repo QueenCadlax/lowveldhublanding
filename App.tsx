@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { ErrorBoundary } from './components/ErrorBoundary';
+import { updatePageMetadata } from './lib/seo';
 import { Home } from './pages/Home';
 import { Vision } from './pages/Vision';
 import { Ecosystem } from './pages/Ecosystem';
@@ -18,12 +19,13 @@ const App: React.FC = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    updatePageMetadata(currentPage);
   }, [currentPage]);
 
   const renderPage = () => {
     switch (currentPage) {
       case 'vision': return <Vision />;
-      case 'ecosystem': return <Ecosystem />;
+      case 'ecosystem': return <Ecosystem onNavigate={setCurrentPage} />;
       case 'careers': return <Careers />;
       case 'partners': return <Partners />;
       case 'early-access': return <EarlyAccess />;

@@ -76,9 +76,9 @@ export const EarlyAccess: React.FC = () => {
         <h1 className="text-5xl md:text-8xl font-serif font-light italic leading-tight mb-8">
           The <span className="text-gold-gradient">Reservation</span> List
         </h1>
-        <p className="max-w-2xl mx-auto text-lg md:text-xl font-sans font-extralight text-white/50 leading-relaxed mb-16">
-          Be the first to experience Mpumalanga’s premium digital ecosystem. <br className="hidden md:block" /> 
-          The ecosystem is launching <span className="text-white">July 2026</span>. Secure your presence today.
+        <p className="max-w-2xl mx-auto text-lg md:text-2xl font-sans font-extralight text-white/50 leading-relaxed mb-16">
+          Be the first to experience Mpumalanga's premium digital ecosystem. <br className="hidden md:block" /> 
+          The ecosystem is <span className="text-3xl md:text-5xl text-gold-gradient drop-shadow-[0_0_20px_rgba(212,175,55,0.4)] font-serif font-light italic leading-tight">Launching July 2026</span>. Secure your presence today.
         </p>
 
         {/* Primary Early Access Form */}

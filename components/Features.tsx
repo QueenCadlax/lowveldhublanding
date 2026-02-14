@@ -2,6 +2,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ShieldCheck, Home, Car, Building, Briefcase, Map, Calendar, ShoppingBag } from 'lucide-react';
 
+interface FeaturesProps {
+  onNavigate?: (page: string) => void;
+}
+
 const ecosystemGroups = [
   {
     category: "Premium Services",
@@ -33,7 +37,7 @@ const ecosystemGroups = [
   }
 ];
 
-export const Features: React.FC = () => {
+export const Features: React.FC<FeaturesProps> = ({ onNavigate }) => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -59,7 +63,7 @@ export const Features: React.FC = () => {
     <section 
       id="ecosystem" 
       ref={sectionRef}
-      className={`py-32 bg-luxury-dark relative transition-all duration-500 cubic-bezier(0.22, 1, 0.36, 1) ${
+      className={`py-32 bg-black relative transition-all duration-500 cubic-bezier(0.22, 1, 0.36, 1) ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
       }`}
     >
@@ -104,6 +108,39 @@ export const Features: React.FC = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Business & Partners CTA Section */}
+        <div className="mt-24 pt-24 border-t border-white/10">
+          <div className="flex flex-col items-center text-center gap-8">
+            {/* Icon */}
+            <div className="w-16 h-16 flex items-center justify-center border-2 border-luxury-gold/40 rounded-full text-luxury-gold hover:bg-luxury-gold/5 transition-colors duration-500">
+              <Briefcase className="w-8 h-8" />
+            </div>
+
+            {/* Headline */}
+            <h4 className="text-[10px] uppercase tracking-[0.5em] text-luxury-gold font-sans font-medium">
+              Businesses & Partners
+            </h4>
+
+            {/* Main CTA Heading */}
+            <h3 className="text-3xl md:text-4xl font-serif font-light text-white max-w-2xl">
+              Join the Premium Network
+            </h3>
+
+            {/* Microcopy */}
+            <p className="text-white/60 font-sans font-light text-base leading-relaxed max-w-xl">
+              Showcase your brand, gain verified status, and pre-register your spot in Mpumalanga's elite digital ecosystem.
+            </p>
+
+            {/* CTA Button */}
+            <button
+              onClick={() => onNavigate?.('partners')}
+              className="mt-4 px-10 py-4 bg-luxury-gold text-black font-serif font-medium rounded-sm hover:bg-luxury-gold/90 transition-colors duration-500 shadow-lg hover:shadow-xl hover:shadow-luxury-gold/20 uppercase tracking-wider text-sm"
+            >
+              Pre-Register Your Business
+            </button>
+          </div>
         </div>
       </div>
     </section>

@@ -2,7 +2,11 @@
 import React from 'react';
 import { Features } from '../components/Features';
 
-export const Ecosystem: React.FC = () => {
+interface EcosystemProps {
+  onNavigate?: (page: string) => void;
+}
+
+export const Ecosystem: React.FC<EcosystemProps> = ({ onNavigate }) => {
   return (
     <div className="py-20">
       <div className="max-w-7xl mx-auto px-6 mb-20 text-center">
@@ -16,7 +20,7 @@ export const Ecosystem: React.FC = () => {
         </p>
       </div>
 
-      <Features />
+      <Features onNavigate={onNavigate} />
 
       <div className="max-w-7xl mx-auto px-6 py-32 text-center">
         <h3 className="text-2xl font-serif italic text-white/80 mb-12">"Setting the standard for digital prestige in Mpumalanga"</h3>

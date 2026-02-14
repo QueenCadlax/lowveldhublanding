@@ -12,9 +12,9 @@ export interface PageMetadata {
 
 export const pageMetadata: Record<string, PageMetadata> = {
   home: {
-    title: 'LowveldHub | Mpumalanga\'s Premium Digital Ecosystem',
-    description: 'Join Africa\'s most exclusive digital platform launching July 2026. Verified businesses, luxury stays, vehicles, real estate, and curated experiences in Mpumalanga.',
-    keywords: 'luxury platform, Mpumalanga, digital ecosystem, verified businesses, luxury travel',
+    title: 'LowveldHub | Mpumalanga\'s Official Business, Services & Lifestyle Platform',
+    description: 'Discover verified businesses, trusted professionals, essential services, real estate, jobs, events, tourism and a premium marketplace - all in one powerful Mpumalanga digital ecosystem.',
+    keywords: 'verified businesses, professionals, services, real estate, jobs, events, tourism, Mpumalanga',
     ogImage: 'https://www.lowveldhub.co.za/og-image.jpg',
   },
   vision: {

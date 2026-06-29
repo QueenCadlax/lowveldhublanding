@@ -10,9 +10,9 @@ export function Hero() {
         <div className="blob animate-drift absolute right-0 top-40 size-80 rounded-full bg-gold/25 [animation-delay:3s]" />
       </div>
 
-      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-8">
-        <div className="animate-fade-up">
-          <div className="glass animate-glow-pulse inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium text-muted-foreground">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-8">
+        <div className="animate-fade-up sm:text-center lg:text-left">
+          <div className="glass animate-glow-pulse inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium text-muted-foreground sm:mx-auto lg:mx-0">
             <Sparkles className="size-3.5 text-gold" />
             Premium Digital Studio • Serving South Africa & Worldwide
           </div>
@@ -21,12 +21,12 @@ export function Hero() {
             We build exceptional digital products that help businesses grow.
           </h1>
 
-          <p className="mt-6 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
+          <p className="mt-6 mx-auto max-w-3xl text-pretty text-base leading-relaxed text-muted-foreground sm:max-w-2xl sm:text-lg lg:mx-0">
             From premium websites and mobile apps to custom software and AI automation, we design and engineer digital
             experiences that drive growth, improve efficiency, and create lasting competitive advantages.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-3">
+          <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
             <a
               href="#contact"
               className="group shine inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:-translate-y-0.5 hover:brightness-110 hover:shadow-[0_12px_32px_-10px] hover:shadow-primary"
@@ -46,18 +46,17 @@ export function Hero() {
 
         {/* glass device mockup */}
         <div className="relative animate-fade-up [animation-delay:150ms]">
-          <div className="animate-float-slow relative mx-auto max-w-md">
-            <div className="glass-strong overflow-hidden rounded-3xl p-2">
+          <div className="animate-float-slow relative mx-auto w-full max-w-xl sm:max-w-2xl">
+            <div className="glass-strong overflow-hidden rounded-3xl p-2 shadow-2xl shadow-slate-900/10">
               <Image
                 src="/hero 2.jpg"
                 alt="Lowveld Hub hero visual"
-                width={820}
-                height={640}
+                width={920}
+                height={720}
                 priority
                 className="h-auto w-full rounded-2xl"
               />
             </div>
-            {/* floating mini glass card */}
           </div>
         </div>
       </div>

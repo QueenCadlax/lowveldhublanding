@@ -245,4 +245,33 @@
   .animate-fade-up-slow {
     animation: fade-up-slow 1s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
+
+  .hero-bg {
+    background-image: url('/hero 2.jpg');
+  }
+
+  .hero-overlay {
+    background-image: radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 18%),
+      radial-gradient(circle at bottom, rgba(255, 255, 255, 0.04), transparent 18%),
+      linear-gradient(180deg, rgba(15, 23, 42, 0.08), rgba(15, 23, 42, 0.82));
+    opacity: 0.9;
+    mix-blend-mode: normal;
+  }
+
+  @keyframes bounce-slow {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(6px);
+    }
+  }
+
+  .animate-bounce-slow {
+    animation: bounce-slow 1.6s ease-in-out infinite;
+  }
+
+  .scroll-indicator {
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.16);
+  }
 }

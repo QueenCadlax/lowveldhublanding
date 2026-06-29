@@ -48,31 +48,34 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/favicon-32x32.png',
+        url: '/favicon_io/favicon-32x32.png',
         type: 'image/png',
       },
       {
-        url: '/favicon-16x16.png',
+        url: '/favicon_io/favicon-16x16.png',
         type: 'image/png',
       },
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
+        url: '/favicon_io/apple-touch-icon.png',
+        rel: 'apple-touch-icon',
+      },
+      {
+        url: '/favicon_io/android-chrome-192x192.png',
         type: 'image/png',
       },
       {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
+        url: '/favicon_io/android-chrome-512x512.png',
         type: 'image/png',
       },
       {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: '/favicon_io/favicon.ico',
+        type: 'image/x-icon',
       },
     ],
-    apple: '/apple-icon.png',
-    shortcut: '/favicon-32x32.png',
+    shortcut: '/favicon_io/favicon-32x32.png',
+    apple: '/favicon_io/apple-touch-icon.png',
   },
+  manifest: '/favicon_io/site.webmanifest',
   other: {
     'geo.region': 'South AfricaWorldwide',
     'msapplication-TileColor': '#000000',

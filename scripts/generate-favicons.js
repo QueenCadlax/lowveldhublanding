@@ -3,7 +3,7 @@ const path = require("path")
 const { Resvg } = require("@resvg/resvg-js")
 
 const publicDir = path.join(__dirname, "..", "public")
-const svgPath = path.join(publicDir, "icon.svg")
+const svgPath = path.join(publicDir, "logo.svg")
 const svg = fs.readFileSync(svgPath, "utf8")
 
 const sizes = [16, 32, 48, 180]

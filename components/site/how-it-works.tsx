@@ -12,17 +12,19 @@ export function HowItWorks() {
   return (
     <section id="process" className="py-8 sm:py-10">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <SectionHeading title="Our Process" align="left" className="max-w-full" />
+        <SectionHeading title="Our Process" />
 
-        <div className="relative mt-6">
-          <ol className="grid grid-cols-2 gap-3 sm:gap-4">
+        <div className="relative mt-10">
+          {/* connecting line */}
+          <div className="absolute left-0 right-0 top-6 hidden h-px bg-border lg:block" />
+          <ol className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-4">
             {steps.map((s) => (
-              <li key={s.n} className="glass relative overflow-hidden rounded-3xl border border-border p-4 sm:p-5">
-                <div className="relative inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">
+              <li key={s.n} className="relative">
+                <div className="glass-strong relative z-10 flex size-12 items-center justify-center rounded-full text-sm font-semibold text-primary">
                   {s.n}
                 </div>
-                <h3 className="mt-3 text-sm font-semibold tracking-tight">{s.title}</h3>
-                <p className="mt-2 text-xs leading-snug text-muted-foreground">{s.desc}</p>
+                <h3 className="mt-5 text-base font-semibold tracking-tight">{s.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
               </li>
             ))}
           </ol>

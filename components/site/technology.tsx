@@ -4,19 +4,21 @@ const tech = ["React", "Next.js", "TypeScript", "Node.js", "PostgreSQL", "Vercel
 
 export function Technology() {
   return (
-    <section className="py-6 sm:py-8">
+    <section className="py-8 sm:py-10">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="flex flex-wrap items-center justify-center gap-2 text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground sm:justify-start">
-          <span className="text-primary">React</span>
-          <span>Next.js</span>
-          <span>TypeScript</span>
-          <span>Node.js</span>
-          <span>PostgreSQL</span>
-          <span>Vercel</span>
-          <span>Cloudflare</span>
-          <span>OpenAI</span>
-          <span>Tailwind CSS</span>
-          <span>Git</span>
+        <SectionHeading eyebrow="Our stack" title="Built using industry-leading technologies" />
+        <p className="mx-auto mt-4 max-w-2xl text-center text-base leading-relaxed text-muted-foreground">
+          We use modern, scalable technologies to build fast, secure, and production-ready digital systems.
+        </p>
+        <div className="mx-auto mt-8 grid max-w-5xl grid-cols-2 gap-3 sm:grid-cols-5">
+          {tech.map((t) => (
+            <div
+              key={t}
+              className="glass flex items-center justify-center rounded-2xl border border-border/60 px-4 py-5 text-sm font-medium text-muted-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/30 hover:text-primary"
+            >
+              {t}
+            </div>
+          ))}
         </div>
       </div>
     </section>

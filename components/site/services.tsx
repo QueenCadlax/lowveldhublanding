@@ -38,7 +38,7 @@ export function Services() {
   return (
     <section id="services" className="relative py-8 sm:py-10">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <SectionHeading title="What we do" align="left" className="max-w-full" />
+        <SectionHeading title="What we do" className="max-w-full" />
 
         <div className="mt-6 grid grid-cols-2 gap-2 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((s) => (

@@ -1,59 +1,63 @@
+import Image from "next/image"
 import { ArrowRight, Sparkles } from "lucide-react"
 
 export function Hero() {
   return (
-    <section id="top" className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
-      <div className="hero-bg absolute inset-0 bg-cover bg-center" />
-      <div className="absolute inset-0 bg-black/80" />
-      <div className="absolute inset-0 hero-overlay" />
-
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute left-10 top-28 h-72 w-72 rounded-full bg-gold/10 blur-3xl" />
-        <div className="absolute right-0 top-20 h-56 w-56 rounded-full bg-cyan-300/10 blur-3xl" />
-        <div className="absolute inset-x-0 bottom-0 h-52 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),transparent_60%)]" />
+    <section id="top" className="relative overflow-hidden pt-24 pb-16 sm:pt-28 lg:pb-20">
+      {/* soft background glows */}
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="blob animate-drift absolute -left-20 top-10 size-72 rounded-full bg-primary/30" />
+        <div className="blob animate-drift absolute right-0 top-40 size-80 rounded-full bg-gold/25 [animation-delay:3s]" />
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-6xl items-center justify-center px-4 py-24 sm:px-6">
-        <div className="w-full max-w-3xl text-center">
-          <div className="animate-fade-up inline-flex items-center justify-center rounded-full border border-white/15 bg-white/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-white/80 shadow-[0_0_0_1px_rgba(255,255,255,0.08)] backdrop-blur-2xl">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-8">
+        <div className="animate-fade-up sm:text-center lg:text-left">
+          <div className="glass animate-glow-pulse inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium text-muted-foreground sm:mx-auto lg:mx-0">
             <Sparkles className="size-3.5 text-gold" />
-            Premium Digital Studio • South Africa
+            Premium Digital Studio • Serving South Africa & Worldwide
           </div>
 
-          <h1 className="mt-10 text-[2.6rem] font-semibold leading-[0.96] tracking-[-0.04em] text-white sm:text-[3.6rem] md:text-[4.8rem] lg:text-[6rem]">
-            We Build Digital Products
-            <span className="block">That <span className="text-gold">Grow</span> Businesses.</span>
+          <h1 className="mt-6 text-balance text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+            We build exceptional digital products that help businesses grow.
           </h1>
 
-          <p className="mx-auto mt-6 max-w-xl text-sm leading-7 text-slate-200/80 sm:text-base md:text-lg">
-            We design and engineer premium websites, mobile apps, custom software, and AI-powered systems that help ambitious businesses scale, automate, and stand out.
+          <p className="mt-6 mx-auto max-w-3xl text-pretty text-base leading-relaxed text-muted-foreground sm:max-w-2xl sm:text-lg lg:mx-0">
+            From premium websites and mobile apps to custom software and AI automation, we design and engineer digital
+            experiences that drive growth, improve efficiency, and create lasting competitive advantages.
           </p>
 
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-4">
+          <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
             <a
               href="#contact"
-              className="group inline-flex min-w-[220px] items-center justify-center rounded-full bg-gold px-8 py-4 text-base font-semibold text-primary-foreground shadow-[0_18px_48px_-30px_rgba(255,191,0,0.95)] transition duration-300 hover:-translate-y-0.5 hover:brightness-110"
+              className="group shine inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:-translate-y-0.5 hover:brightness-110 hover:shadow-[0_12px_32px_-10px] hover:shadow-primary"
             >
-              Start Your Project
-              <ArrowRight className="size-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+              Start a Project
+              <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
             </a>
             <a
               href="#work"
-              className="inline-flex min-w-[220px] items-center justify-center rounded-full border border-white/20 bg-white/10 px-8 py-4 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-white/15"
+              className="glass inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-foreground transition-all hover:-translate-y-0.5"
             >
               View Our Work
             </a>
           </div>
 
-          <p className="mt-6 text-sm text-slate-300/80">
-            Trusted by ambitious businesses across South Africa and worldwide.
-          </p>
         </div>
-      </div>
 
-      <div className="absolute inset-x-0 bottom-8 z-10 flex justify-center">
-        <div className="scroll-indicator flex h-14 w-8 items-center justify-center rounded-full border border-white/20 bg-white/10">
-          <span className="h-3.5 w-3.5 rounded-full bg-white/80 animate-bounce-slow" />
+        {/* glass device mockup */}
+        <div className="relative hidden animate-fade-up [animation-delay:150ms] lg:block">
+          <div className="animate-float-slow relative mx-auto w-full max-w-xl sm:max-w-2xl">
+            <div className="glass-strong overflow-hidden rounded-3xl p-2 shadow-2xl shadow-slate-900/10">
+              <Image
+                src="/hero 2.jpg"
+                alt="Lowveld Hub hero visual"
+                width={920}
+                height={720}
+                priority
+                className="h-auto w-full rounded-2xl"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

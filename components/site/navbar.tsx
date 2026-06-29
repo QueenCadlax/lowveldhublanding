@@ -28,7 +28,7 @@ export function Navbar() {
       <nav
         className={cn(
           "flex w-full max-w-6xl items-center justify-between rounded-2xl px-4 py-3 transition-all duration-300 sm:px-6",
-          scrolled ? "glass-strong border border-white/10 backdrop-blur-xl bg-white/10" : "bg-transparent",
+          scrolled ? "glass-strong" : "border border-transparent",
         )}
       >
         <a href="#top" className="flex items-center gap-3" aria-label="Lowveld Hub home">

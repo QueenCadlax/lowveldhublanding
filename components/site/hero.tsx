@@ -10,42 +10,43 @@ export function Hero() {
         <div className="blob animate-drift absolute right-0 top-40 size-80 rounded-full bg-gold/25 [animation-delay:3s]" />
       </div>
 
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-10 px-4 sm:px-6">
-        <div className="animate-fade-up flex-1 min-w-0">
-          <div className="glass animate-glow-pulse inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium text-muted-foreground">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-8">
+        <div className="animate-fade-up sm:text-center lg:text-left">
+          <div className="glass animate-glow-pulse inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium text-muted-foreground sm:mx-auto lg:mx-0">
             <Sparkles className="size-3.5 text-gold" />
             Premium Digital Studio • Serving South Africa & Worldwide
           </div>
 
-          <h1 className="mt-6 text-balance text-3xl font-semibold leading-[1.05] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
+          <h1 className="mt-6 text-balance text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
             We build exceptional digital products that help businesses grow.
           </h1>
 
-          <p className="mt-6 max-w-3xl text-pretty text-sm leading-7 text-muted-foreground sm:text-base md:text-lg">
+          <p className="mt-6 mx-auto max-w-3xl text-pretty text-base leading-relaxed text-muted-foreground sm:max-w-2xl sm:text-lg lg:mx-0">
             From premium websites and mobile apps to custom software and AI automation, we design and engineer digital
             experiences that drive growth, improve efficiency, and create lasting competitive advantages.
           </p>
 
-          <div className="mt-7 flex flex-nowrap items-center gap-3">
+          <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
             <a
               href="#contact"
-              className="group shine inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-all hover:-translate-y-0.5 hover:brightness-110 hover:shadow-[0_12px_32px_-10px] hover:shadow-primary lg:px-6 lg:py-3"
+              className="group shine inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:-translate-y-0.5 hover:brightness-110 hover:shadow-[0_12px_32px_-10px] hover:shadow-primary"
             >
               Start a Project
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
             </a>
             <a
               href="#work"
-              className="glass inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-foreground transition-all hover:-translate-y-0.5 lg:px-6 lg:py-3"
+              className="glass inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-foreground transition-all hover:-translate-y-0.5"
             >
               View Our Work
             </a>
           </div>
+
         </div>
 
         {/* glass device mockup */}
-        <div className="relative animate-fade-up [animation-delay:150ms] flex-shrink-0">
-          <div className="animate-float-slow relative mx-auto w-[90px] sm:w-[110px] md:w-[170px] lg:w-full lg:max-w-2xl">
+        <div className="relative hidden animate-fade-up [animation-delay:150ms] lg:block">
+          <div className="animate-float-slow relative mx-auto w-full max-w-xl sm:max-w-2xl">
             <div className="glass-strong overflow-hidden rounded-3xl p-2 shadow-2xl shadow-slate-900/10">
               <Image
                 src="/hero 2.jpg"

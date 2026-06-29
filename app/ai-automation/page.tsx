@@ -4,6 +4,21 @@ import { ServicePage } from "@/components/site/service-page"
 export const metadata: Metadata = {
   title: "AI Automation | Lowveld Hub",
   description: "AI automation solutions that help businesses reduce admin, save time, and operate more efficiently.",
+  openGraph: {
+    title: "AI Automation | Lowveld Hub",
+    description: "AI automation solutions that help businesses reduce admin, save time, and operate more efficiently.",
+    type: "website",
+    url: "https://www.lowveldhub.co.za/ai-automation",
+    locale: "en_ZA",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Automation | Lowveld Hub",
+    description: "AI automation solutions that help businesses reduce admin, save time, and operate more efficiently.",
+  },
+  alternates: {
+    canonical: "https://www.lowveldhub.co.za/ai-automation",
+  },
 }
 
 export default function AIAutomationPage() {

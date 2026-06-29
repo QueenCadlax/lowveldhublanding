@@ -4,6 +4,21 @@ import { ServicePage } from "@/components/site/service-page"
 export const metadata: Metadata = {
   title: "Web Design | Lowveld Hub",
   description: "Premium web design for ambitious businesses that want beautiful, conversion-focused websites.",
+  openGraph: {
+    title: "Web Design | Lowveld Hub",
+    description: "Premium web design for ambitious businesses that want beautiful, conversion-focused websites.",
+    type: "website",
+    url: "https://www.lowveldhub.co.za/web-design",
+    locale: "en_ZA",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Web Design | Lowveld Hub",
+    description: "Premium web design for ambitious businesses that want beautiful, conversion-focused websites.",
+  },
+  alternates: {
+    canonical: "https://www.lowveldhub.co.za/web-design",
+  },
 }
 
 export default function WebDesignPage() {

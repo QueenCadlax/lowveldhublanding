@@ -4,6 +4,21 @@ import { ServicePage } from "@/components/site/service-page"
 export const metadata: Metadata = {
   title: "Mobile App Development | Lowveld Hub",
   description: "Premium mobile app development for businesses that want polished apps that feel native and perform beautifully.",
+  openGraph: {
+    title: "Mobile App Development | Lowveld Hub",
+    description: "Premium mobile app development for businesses that want polished apps that feel native and perform beautifully.",
+    type: "website",
+    url: "https://www.lowveldhub.co.za/mobile-app-development",
+    locale: "en_ZA",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mobile App Development | Lowveld Hub",
+    description: "Premium mobile app development for businesses that want polished apps that feel native and perform beautifully.",
+  },
+  alternates: {
+    canonical: "https://www.lowveldhub.co.za/mobile-app-development",
+  },
 }
 
 export default function MobileAppDevelopmentPage() {

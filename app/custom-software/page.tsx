@@ -4,6 +4,21 @@ import { ServicePage } from "@/components/site/service-page"
 export const metadata: Metadata = {
   title: "Custom Software | Lowveld Hub",
   description: "Custom software solutions designed to solve operational challenges and improve how teams work every day.",
+  openGraph: {
+    title: "Custom Software | Lowveld Hub",
+    description: "Custom software solutions designed to solve operational challenges and improve how teams work every day.",
+    type: "website",
+    url: "https://www.lowveldhub.co.za/custom-software",
+    locale: "en_ZA",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Custom Software | Lowveld Hub",
+    description: "Custom software solutions designed to solve operational challenges and improve how teams work every day.",
+  },
+  alternates: {
+    canonical: "https://www.lowveldhub.co.za/custom-software",
+  },
 }
 
 export default function CustomSoftwarePage() {

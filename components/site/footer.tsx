@@ -3,11 +3,21 @@ import { Mail, MapPin } from "lucide-react"
 const columns = [
   {
     title: "Company",
-    links: ["About", "Process", "Careers", "Contact"],
+    links: [
+      { label: "About", href: "/about" },
+      { label: "Process", href: "#process" },
+      { label: "Careers", href: "#careers" },
+      { label: "Contact", href: "/contact" },
+    ],
   },
   {
     title: "Services",
-    links: ["Website Design", "Development", "Mobile Apps", "AI Automation"],
+    links: [
+      { label: "Website Design", href: "/web-design" },
+      { label: "Website Development", href: "/website-development" },
+      { label: "Mobile Apps", href: "/mobile-app-development" },
+      { label: "AI Automation", href: "/ai-automation" },
+    ],
   },
 ]
 
@@ -54,12 +64,12 @@ export function Footer() {
               <p className="text-sm font-semibold">{col.title}</p>
               <ul className="mt-4 space-y-3">
                 {col.links.map((link) => (
-                  <li key={link}>
+                  <li key={link.label}>
                     <a
-                      href="#"
+                      href={link.href}
                       className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                     >
-                      {link}
+                      {link.label}
                     </a>
                   </li>
                 ))}

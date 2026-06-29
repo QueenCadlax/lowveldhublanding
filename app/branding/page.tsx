@@ -4,6 +4,21 @@ import { ServicePage } from "@/components/site/service-page"
 export const metadata: Metadata = {
   title: "Branding | Lowveld Hub",
   description: "Branding and visual identity services for businesses that want to look sharper, more premium, and more consistent.",
+  openGraph: {
+    title: "Branding | Lowveld Hub",
+    description: "Branding and visual identity services for businesses that want to look sharper, more premium, and more consistent.",
+    type: "website",
+    url: "https://www.lowveldhub.co.za/branding",
+    locale: "en_ZA",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Branding | Lowveld Hub",
+    description: "Branding and visual identity services for businesses that want to look sharper, more premium, and more consistent.",
+  },
+  alternates: {
+    canonical: "https://www.lowveldhub.co.za/branding",
+  },
 }
 
 export default function BrandingPage() {

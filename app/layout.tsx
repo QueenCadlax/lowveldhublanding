@@ -48,12 +48,22 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
+        url: '/favicon-32x32.png',
+        type: 'image/png',
+      },
+      {
+        url: '/favicon-16x16.png',
+        type: 'image/png',
+      },
+      {
         url: '/icon-light-32x32.png',
         media: '(prefers-color-scheme: light)',
+        type: 'image/png',
       },
       {
         url: '/icon-dark-32x32.png',
         media: '(prefers-color-scheme: dark)',
+        type: 'image/png',
       },
       {
         url: '/icon.svg',
@@ -61,9 +71,12 @@ export const metadata: Metadata = {
       },
     ],
     apple: '/apple-icon.png',
+    shortcut: '/favicon-32x32.png',
   },
   other: {
     'geo.region': 'South AfricaWorldwide',
+    'msapplication-TileColor': '#000000',
+    'theme-color': '#ffffff',
   },
 }
 

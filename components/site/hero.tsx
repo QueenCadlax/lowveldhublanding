@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { ArrowRight, Sparkles } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 
 export function Hero() {
   return (
@@ -13,7 +13,6 @@ export function Hero() {
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-8">
         <div className="animate-fade-up sm:text-center lg:text-left">
           <div className="glass animate-glow-pulse inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium text-muted-foreground sm:mx-auto lg:mx-0">
-            <Sparkles className="size-3.5 text-gold" />
             Premium Digital Studio • Serving South Africa & Worldwide
           </div>
 

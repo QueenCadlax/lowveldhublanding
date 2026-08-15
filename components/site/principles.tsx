@@ -25,11 +25,11 @@ export function Principles() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading eyebrow="HOW WE BUILD" title="Built with intention." align="center" />
 
-        <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {principles.map((item) => (
-            <div key={item.title} className="glass premium-card rounded-2xl p-5">
+            <div key={item.title} className="glass premium-card rounded-2xl p-4 flex flex-col h-full">
               <h3 className="text-sm font-semibold tracking-tight text-foreground">{item.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
+              <p className="mt-2 text-sm leading-snug text-muted-foreground">{item.desc}</p>
             </div>
           ))}
         </div>

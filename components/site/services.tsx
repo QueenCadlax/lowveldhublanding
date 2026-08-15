@@ -163,24 +163,27 @@ export function Services() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading eyebrow="OUR SERVICES" title="Technology built around your business." className="max-w-full" />
 
-        <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <div id="services-grid" className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => (
             <a
               key={s.title}
               href={s.href}
               className={cn(
-                "group glass premium-card relative block overflow-hidden rounded-xl p-3.5 transition-all duration-300 hover:-translate-y-0.5",
+                "group glass premium-card services-card relative block overflow-hidden rounded-xl p-3 sm:p-3.5 transition-all duration-300 hover:-translate-y-0.5 h-full flex flex-col",
               )}
             >
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent text-primary">
                 <s.icon />
               </div>
-              <h3 className="mt-4 text-sm font-semibold tracking-tight">{s.title}</h3>
-              <p className="mt-2 text-xs leading-snug text-muted-foreground">{s.desc}</p>
+              <div className="mt-4 flex-1">
+                <h3 className="text-sm font-semibold tracking-tight">{s.title}</h3>
+                <p className="mt-2 text-xs leading-snug text-muted-foreground overflow-hidden max-h-[4.8rem]">{s.desc}</p>
+              </div>
               <span className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 ring-1 ring-inset ring-gold/30 transition-opacity duration-300 group-hover:opacity-100" />
             </a>
           ))}
         </div>
+        <style>{`@media (max-width:320px){#services-grid{grid-template-columns:1fr!important}}`}</style>
       </div>
     </section>
   )

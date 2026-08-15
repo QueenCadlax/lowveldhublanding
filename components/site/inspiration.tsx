@@ -60,7 +60,7 @@ export function Inspiration() {
 
               <div className="relative z-10 p-4">
                 <p className="text-xs font-semibold tracking-widest text-muted-foreground">{it.category}</p>
-                <h3 className="mt-2 text-xl font-semibold tracking-tight">{it.name}</h3>
+                <h3 className="mt-2 text-lg font-medium tracking-wide [font-family:var(--font-heading)]">{it.name}</h3>
               </div>
               <span className="absolute right-4 top-4 rounded-full border border-white/12 bg-white/6 px-3 py-1 text-sm opacity-90">→</span>
             </a>

@@ -4,7 +4,6 @@ import { Hero } from "@/components/site/hero"
 import { TrustStrip } from "@/components/site/trust-strip"
 import { Services } from "@/components/site/services"
 import { Solutions } from "@/components/site/solutions"
-import { WhyUs } from "@/components/site/why-us"
 import { Industries } from "@/components/site/industries"
 import { Inspiration } from "@/components/site/inspiration"
 import { FeaturedWork } from "@/components/site/featured-work"
@@ -48,7 +47,6 @@ export default function Page() {
       <TrustStrip />
       <Services />
       <Solutions />
-      <WhyUs />
       <Industries />
       <Inspiration />
       <FeaturedWork />

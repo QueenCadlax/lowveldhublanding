@@ -4,24 +4,23 @@ export function Pricing() {
   return (
     <section id="pricing" className="py-8 sm:py-10">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <SectionHeading title="Pricing" />
+        <SectionHeading eyebrow="PROJECT INVESTMENT" title="Built around your requirements." />
 
-        <div className="mx-auto mt-8 max-w-3xl rounded-3xl border border-border/60 bg-card/40 p-8 sm:p-10">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">From R5,000+ (≈ US$300+)</p>
-          <p className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
-            Projects start from R5,000, with final pricing based on your requirements.
-          </p>
-          <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-            Every project is quoted individually to ensure you receive the right solution for your goals and budget.
-          </p>
+        <div className="relative mx-auto mt-8 max-w-3xl overflow-hidden rounded-3xl border border-border/60 p-8 sm:p-10">
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(81,116,255,0.16),transparent_42%),radial-gradient(circle_at_bottom_right,rgba(15,23,42,0.12),transparent_36%)]" />
 
-          <div className="mt-8 flex justify-start">
-            <a
-              href="mailto:info@lowveldhub.co.za"
-              className="inline-flex items-center justify-center rounded-full border border-white/20 bg-gradient-to-r from-sky-600 to-blue-700 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:brightness-110"
-            >
-              Get a quote
-            </a>
+          <div className="relative z-10">
+            <p className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl"><strong>Projects start from R10,000+.</strong></p>
+            <p className="mt-5 text-base leading-relaxed text-muted-foreground">Final investment is shaped by scope, complexity and your long-term objectives.</p>
+
+            <div className="mt-8 flex justify-start">
+              <a
+                href="mailto:info@lowveldhub.co.za"
+                className="inline-flex items-center justify-center rounded-full border border-white/20 bg-gradient-to-r from-sky-600 to-blue-700 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:brightness-110"
+              >
+                Get a quote →
+              </a>
+            </div>
           </div>
         </div>
       </div>

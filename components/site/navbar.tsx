@@ -1,49 +1,62 @@
 "use client"
 
+import Image from "next/image"
 import { useEffect, useState } from "react"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const links = [
-  { label: "Services", href: "#services" },
-  { label: "Work", href: "#work" },
-  { label: "Process", href: "#process" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Services", href: "/#services" },
+  { label: "Work", href: "/#work" },
+  { label: "Process", href: "/#process" },
+  { label: "Pricing", href: "/#pricing" },
+  { label: "FAQ", href: "/#faq" },
   { label: "About", href: "/about" },
+  { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
 ]
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const [logoReveal, setLogoReveal] = useState(false)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16)
     onScroll()
     window.addEventListener("scroll", onScroll, { passive: true })
+
+    const hasSeenLogoReveal = window.sessionStorage.getItem("lowveld-logo-reveal")
+    if (!hasSeenLogoReveal) {
+      window.sessionStorage.setItem("lowveld-logo-reveal", "true")
+      setLogoReveal(true)
+    }
+
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-4">
+    <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-3">
       <nav
         className={cn(
-          "flex w-full max-w-6xl items-center justify-between rounded-2xl px-4 py-3 transition-all duration-300 sm:px-6",
-          scrolled ? "glass-strong" : "border border-transparent",
+          "glass-strong flex w-full max-w-6xl items-center justify-between rounded-full px-4 py-2.5 transition-all duration-300 sm:px-5",
+          scrolled ? "scale-[0.985] py-2 shadow-[0_18px_40px_-20px_rgba(15,23,42,0.55)]" : "shadow-[0_18px_50px_-24px_rgba(15,23,42,0.28)]",
         )}
       >
-        <a href="#top" className="flex items-center gap-3" aria-label="Lowveld Hub home">
-          <span className="relative flex size-11 items-center justify-center rounded-2xl border border-slate-200/80 bg-[linear-gradient(135deg,_rgba(255,255,255,0.98),_rgba(248,250,252,0.95))] shadow-[0_14px_34px_-18px_rgba(15,23,42,0.5)] backdrop-blur-sm">
-            <span className="absolute inset-[2px] rounded-[13px] border border-slate-900/5" />
-            <svg viewBox="0 0 64 64" className="relative size-7 text-slate-900" aria-hidden="true">
-              <rect x="14" y="14" width="36" height="36" rx="8" stroke="currentColor" strokeWidth="1.6" fill="none" />
-              <path d="M24 22v20" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-              <path d="M24 22h10" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-              <path d="M34 22v10" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-              <path d="M34 32h8" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-              <path d="M42 22v20" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-            </svg>
+        <a href="/" className="logo-mark flex items-center gap-3" aria-label="Lowveld Hub home">
+          <span className={cn("logo-shell relative flex size-11 items-center justify-center rounded-2xl border border-slate-200/80 bg-[linear-gradient(135deg,_rgba(255,255,255,0.98),_rgba(248,250,252,0.95))] shadow-[0_14px_34px_-18px_rgba(15,23,42,0.5)] backdrop-blur-sm", logoReveal && "logo-shell-animate")}>
+            <span className="logo-glow absolute inset-0 rounded-[inherit] opacity-0 transition-opacity duration-500" />
+            <span className="logo-node logo-node-a" />
+            <span className="logo-node logo-node-b" />
+            <span className="logo-node logo-node-c" />
+            <Image
+              src="/logo lvh1.png"
+              alt="Lowveld Hub logo"
+              width={40}
+              height={40}
+              className="logo-svg relative size-7 object-contain"
+              priority
+            />
           </span>
           <span className="text-base font-semibold tracking-tight">
             Lowveld<span className="ml-1 text-primary">Hub</span>

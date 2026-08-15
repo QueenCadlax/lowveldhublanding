@@ -164,7 +164,7 @@ export function QuoteBuilder() {
             </div>
 
             <a
-              href="#contact"
+              href="/contact"
               className="mt-7 inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:brightness-110"
             >
               Request this quote

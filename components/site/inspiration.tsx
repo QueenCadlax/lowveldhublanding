@@ -2,20 +2,15 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { ArrowRight } from "lucide-react"
 import { useEffect } from "react"
 
 const items = [
   { category: "FINE DINING", name: "FYN", href: "https://fynrestaurant.com/", image: "/fyn lvh.jpg" },
-  { category: "PROPERTY", name: "TRICOLT", href: "https://www.tricolt.co.za/", image: "/Tricolt lvh.jpg" },
   { category: "LUXURY DEVELOPMENT", name: "STEYN CITY", href: "https://steyncity.co.za/", image: "/steyn lvh.jpg" },
   { category: "SAFARI & LODGE", name: "ROYAL MALEWANE", href: "https://www.theroyalportfolio.com/royal-malewane/", image: "/royal lvh.jpg" },
-  { category: "AUTOMOTIVE", name: "DAYTONA", href: "https://www.daytona.co.za/", image: "/dayton lvh.jpg" },
-  { category: "WEDDINGS & EVENTS", name: "PRECIOUS THE PLANNER", href: "https://www.preciouscelebrations.co.za/", image: "/precious lvh.jpg" },
 ]
 
 export function Inspiration() {
-  const [expanded, setExpanded] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
@@ -30,7 +25,7 @@ export function Inspiration() {
     }
   }, [])
 
-  const visible = expanded ? items : items.slice(0, isMobile ? 4 : 6)
+  const visible = items.slice(0, isMobile ? 4 : 6)
 
   return (
     <section className="py-8 sm:py-10">
@@ -65,14 +60,6 @@ export function Inspiration() {
               <span className="absolute right-4 top-4 rounded-full border border-white/12 bg-white/6 px-3 py-1 text-sm opacity-90">→</span>
             </a>
           ))}
-        </div>
-
-        <div className="mt-6 flex justify-center">
-          {!expanded && (
-            <button onClick={() => setExpanded(true)} className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold">
-              Explore all inspiration <ArrowRight className="size-4" />
-            </button>
-          )}
         </div>
 
         

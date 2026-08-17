@@ -1,20 +1,23 @@
 import type { Metadata } from "next"
+import dynamic from "next/dynamic"
 import { Navbar } from "@/components/site/navbar"
 import { Hero } from "@/components/site/hero"
 import { TrustStrip } from "@/components/site/trust-strip"
 import { Services } from "@/components/site/services"
-import { Solutions } from "@/components/site/solutions"
-import { Industries } from "@/components/site/industries"
-import { Inspiration } from "@/components/site/inspiration"
-import { FeaturedWork } from "@/components/site/featured-work"
-import { Process } from "@/components/site/process"
-import { Technology } from "@/components/site/technology"
-import { Principles } from "@/components/site/principles"
-import { Pricing } from "@/components/site/pricing"
-import { Faq } from "@/components/site/faq"
-import { FinalCta } from "@/components/site/final-cta"
-import { Footer } from "@/components/site/footer"
-import { WhatsAppFloat } from "@/components/site/whatsapp-float"
+
+// Lazy load below-fold components
+const Solutions = dynamic(() => import("@/components/site/solutions").then(mod => ({ default: mod.Solutions })))
+const Industries = dynamic(() => import("@/components/site/industries").then(mod => ({ default: mod.Industries })))
+const Inspiration = dynamic(() => import("@/components/site/inspiration").then(mod => ({ default: mod.Inspiration })))
+const FeaturedWork = dynamic(() => import("@/components/site/featured-work").then(mod => ({ default: mod.FeaturedWork })))
+const Process = dynamic(() => import("@/components/site/process").then(mod => ({ default: mod.Process })))
+const Technology = dynamic(() => import("@/components/site/technology").then(mod => ({ default: mod.Technology })))
+const Principles = dynamic(() => import("@/components/site/principles").then(mod => ({ default: mod.Principles })))
+const Pricing = dynamic(() => import("@/components/site/pricing").then(mod => ({ default: mod.Pricing })))
+const Faq = dynamic(() => import("@/components/site/faq").then(mod => ({ default: mod.Faq })))
+const FinalCta = dynamic(() => import("@/components/site/final-cta").then(mod => ({ default: mod.FinalCta })))
+const Footer = dynamic(() => import("@/components/site/footer").then(mod => ({ default: mod.Footer })))
+const WhatsAppFloat = dynamic(() => import("@/components/site/whatsapp-float").then(mod => ({ default: mod.WhatsAppFloat })))
 
 export const metadata: Metadata = {
   title: "Lowveld Hub | Web Development | Software Development & Digital Transformation",

@@ -5,11 +5,11 @@ import { Footer } from "@/components/site/footer"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Data & Intelligence | Lowveld Hub",
-  description: "Data platforms, analytics and dashboards that turn business data into actionable insight.",
+  title: "Custom Software | Lowveld Hub",
+  description: "Purpose-built software for complex processes, customer platforms and unique business requirements.",
 }
 
-export default function DataAnalyticsPage() {
+export default function CustomSoftwarePage() {
   return (
     <main className="relative overflow-x-hidden">
       <Navbar />
@@ -33,15 +33,15 @@ export default function DataAnalyticsPage() {
           <div className="mt-8">
             <div className="glass inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium text-muted-foreground">
               <Sparkles className="size-3.5 text-gold" />
-              Data & Intelligence
+              Custom Software
             </div>
 
             <h1 className="mt-6 text-balance text-5xl font-semibold leading-[1.1] tracking-tight sm:text-6xl">
-              Turn Data Into Decisions
+              Software Built for Your Business
             </h1>
 
             <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-              Data platforms, analytics and dashboards that turn business data into actionable insight. We help you see what's really happening in your business.
+              Purpose-built software for complex processes, customer platforms and unique business requirements. When off-the-shelf solutions don't cut it, we build exactly what you need.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -68,17 +68,17 @@ export default function DataAnalyticsPage() {
         <div className="mx-auto max-w-5xl">
           <div className="mb-12">
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">What We Build</h2>
-            <p className="mt-2 text-muted-foreground">Analytics solutions that actually help you understand your business.</p>
+            <p className="mt-2 text-muted-foreground">Custom solutions for complex problems that require custom thinking.</p>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              "Power BI Dashboards",
-              "Business Intelligence",
-              "Data Pipelines",
-              "Reporting Systems",
-              "Analytics Platforms",
-              "KPI Monitoring",
+              "Enterprise Systems",
+              "Legacy System Modernization",
+              "Integration Platforms",
+              "Workflow Automation",
+              "Data Processing Systems",
+              "Custom Industry Solutions",
             ].map((item) => (
               <div
                 key={item}
@@ -99,17 +99,17 @@ export default function DataAnalyticsPage() {
         <div className="mx-auto max-w-5xl">
           <div className="mb-12">
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Why Lowveld Hub</h2>
-            <p className="mt-2 text-muted-foreground">We understand that data is only useful if you can actually use it.</p>
+            <p className="mt-2 text-muted-foreground">We've built systems for startups and enterprises. We know how to scale.</p>
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2">
             {[
-              { title: "Actionable Insights", desc: "Data that leads to real decisions, not just pretty charts." },
-              { title: "Real-Time Data", desc: "Always up-to-date information when you need it." },
-              { title: "Easy to Use", desc: "Dashboards your team understands without training." },
-              { title: "Scalable", desc: "From millions to billions of data points." },
-              { title: "Secure", desc: "Your data protected with enterprise-grade security." },
-              { title: "Future-Ready", desc: "Architecture that grows with your data." },
+              { title: "Custom-Built", desc: "No frameworks forced into your workflow. We build around your needs." },
+              { title: "Scalable Architecture", desc: "Systems designed to grow from 10 to 10,000 users." },
+              { title: "Domain Expertise", desc: "We understand your industry and its unique challenges." },
+              { title: "Future-Proof", desc: "Clean code and architecture that lasts for years." },
+              { title: "Integration Ready", desc: "Works seamlessly with your existing systems." },
+              { title: "Ongoing Support", desc: "We maintain and improve your systems over time." },
             ].map((item) => (
               <div key={item.title} className="glass rounded-2xl border border-border/40 p-6">
                 <h3 className="font-semibold text-foreground">{item.title}</h3>
@@ -145,10 +145,10 @@ export default function DataAnalyticsPage() {
         <div className="mx-auto max-w-3xl">
           <div className="glass rounded-3xl border border-border/40 p-8 sm:p-12 text-center">
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-              Ready to see your data clearly?
+              Have a complex problem?
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Let's build analytics that help you understand and grow your business.
+              Let's build a software solution that actually solves it.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <a

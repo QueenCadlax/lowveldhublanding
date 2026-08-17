@@ -4,10 +4,17 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import { StructuredData } from '@/components/site/structured-data'
 
-const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
+const geistSans = Geist({ 
+  variable: '--font-geist-sans', 
+  subsets: ['latin'],
+  display: 'swap',
+  preload: true,
+})
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
+  display: 'swap',
+  preload: true,
 })
 
 export const metadata: Metadata = {
@@ -104,6 +111,9 @@ export const viewport: Viewport = {
     { media: '(prefers-color-scheme: light)', color: '#09090B' },
     { media: '(prefers-color-scheme: dark)', color: '#09090B' },
   ],
+  initialScale: 1,
+  maximumScale: 5,
+  width: 'device-width',
 }
 
 export default function RootLayout({
